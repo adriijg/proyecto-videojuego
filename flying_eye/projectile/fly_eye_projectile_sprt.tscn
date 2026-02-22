@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dqy1dl48k3wqm"]
+
+[ext_resource type="Texture2D" uid="uid://b05pdadfynuhf" path="res://flying_eye/img/projectile_sprite.png" id="1_l6wht"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1dhj"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hwks"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtonh"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdo0n"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2nf7"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bd2c"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf68b"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i75ks"]
+atlas = ExtResource("1_l6wht")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1t5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1dhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hwks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtonh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdo0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2nf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bd2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf68b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i75ks")
+}],
+"loop": true,
+"name": &"throw",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6wht"]
+
+[node name="fly_eye_projectile_sprt" type="AnimatedSprite2D" unique_id=2131587954]
+sprite_frames = SubResource("SpriteFrames_t1t5t")
+animation = &"throw"
+frame_progress = 0.63891065
+
+[node name="coll_fly_eye_projectile" type="CollisionShape2D" parent="." unique_id=1414998917]
+shape = SubResource("CircleShape2D_l6wht")

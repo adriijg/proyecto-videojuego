@@ -231,4 +231,4 @@ animations = [{
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_b44ii")
 animation = &"hurt"
-frame_progress = 0.33504722
+frame_progress = 0.898733
