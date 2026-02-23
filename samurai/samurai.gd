@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var air_acceleration = 2000
 @export var air_friction = 700
 
-@onready var ani_samurai = $sprt_samurai
+@onready var ani_samurai = $ani_samurai
 
 func apply_gravity(delta):
 	if not is_on_floor():

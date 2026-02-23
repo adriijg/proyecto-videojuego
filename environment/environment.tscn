@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://cx25r5arrpoek"]
+[gd_scene format=3 uid="uid://5ngokwkx0p6b"]
 
 [ext_resource type="PackedScene" uid="uid://dalwacahaetna" path="res://nivel1/nivel_facil.tscn" id="1_8a1ph"]
 [ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="2_wjl7u"]
 
-[node name="environment" type="Node2D" unique_id=1046047178]
-
-[node name="samurai" parent="." unique_id=1047257845 instance=ExtResource("2_wjl7u")]
-position = Vector2(-430, 107)
+[node name="environment" type="Node2D" unique_id=1386414784]
 
 [node name="nivel_facil" parent="." unique_id=1062196207 instance=ExtResource("1_8a1ph")]
+
+[node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_wjl7u")]
+position = Vector2(84, 159)
