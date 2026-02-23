@@ -291,6 +291,7 @@ script = ExtResource("1_o3lbu")
 position = Vector2(-8, 1.5)
 scale = Vector2(2.1666667, 1.96875)
 sprite_frames = SubResource("SpriteFrames_b44ii")
+<<<<<<< HEAD
 animation = &"idle"
 frame_progress = 0.758692
 
@@ -300,3 +301,7 @@ shape = SubResource("RectangleShape2D_yrrbe")
 
 [node name="cam_samurai" type="Camera2D" parent="." unique_id=2071950860]
 limit_smoothed = true
+=======
+animation = &"hurt"
+frame_progress = 0.898733
+>>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e

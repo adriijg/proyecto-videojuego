@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://croqtwkgind6m"]
+
+[ext_resource type="Texture2D" uid="uid://byvnlqqneck30" path="res://mushroom/img/Projectile_sprite.png" id="1_skt0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5njm"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqhek"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45bu1"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx01h"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50tqw"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pao63"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xopyp"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(300, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45s0j"]
+atlas = ExtResource("1_skt0g")
+region = Rect2(350, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jox7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5njm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqhek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45bu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx01h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50tqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pao63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xopyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45s0j")
+}],
+"loop": true,
+"name": &"throw",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_skt0g"]
+radius = 5.0
+
+[node name="mushroom_projectile_sprt" type="AnimatedSprite2D" unique_id=514065901]
+sprite_frames = SubResource("SpriteFrames_jox7y")
+animation = &"throw"
+
+[node name="coll_mushroom_projectile" type="CollisionShape2D" parent="." unique_id=29247354]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_skt0g")

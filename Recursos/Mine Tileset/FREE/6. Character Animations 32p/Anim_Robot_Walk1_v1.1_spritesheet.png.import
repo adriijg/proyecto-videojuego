@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://nfkw5xlhm5t"
+=======
+uid="uid://cdnxn316nbr5r"
+>>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e
 path="res://.godot/imported/Anim_Robot_Walk1_v1.1_spritesheet.png-ecae5280be17b6b747ac967f50b241e6.ctex"
 metadata={
 "vram_texture": false

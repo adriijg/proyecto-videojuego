@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cn2vgy7x8as8d"
+=======
+uid="uid://6jtbbg2r0nxk"
+>>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e
 path="res://.godot/imported/Dark VFX 1 (40x32)16.png-3a07fdbdadce6fdec3bb60918a2a1a0e.ctex"
 metadata={
 "vram_texture": false

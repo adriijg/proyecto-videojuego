@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dy86hfi1vxjqk"
+=======
+uid="uid://bwnmi8p7tili0"
+>>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e
 path="res://.godot/imported/GroupPlants_00019.png-75474010cc4e37f2d3c71bb39bb68ab1.ctex"
 metadata={
 "vram_texture": false

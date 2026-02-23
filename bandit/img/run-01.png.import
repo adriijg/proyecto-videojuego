@@ -1,0 +1,50 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/run-01.png.import
+uid="uid://db60fssn66qqd"
+path="res://.godot/imported/run-01.png-98e1229577aac1f0e1e677459bb8ff3e.ctex"
+=======
+uid="uid://dijbp4p310r5c"
+path="res://.godot/imported/run-01.png-b1f00c06b6a9b40bba29d5bf39501a42.ctex"
+>>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/run-01.png.import
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/run-01.png.import
+source_file="res://Recursos/PixelPlatformerSet/Character/Sprite/run-01.png"
+dest_files=["res://.godot/imported/run-01.png-98e1229577aac1f0e1e677459bb8ff3e.ctex"]
+=======
+source_file="res://bandit/img/run-01.png"
+dest_files=["res://.godot/imported/run-01.png-b1f00c06b6a9b40bba29d5bf39501a42.ctex"]
+>>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/run-01.png.import
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
