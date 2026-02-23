@@ -1,8 +1,38 @@
 [gd_scene format=3 uid="uid://ddx4odip8isf8"]
 
 [ext_resource type="Texture2D" uid="uid://c66ved8dfdfpg" path="res://samurai/img/HURT.png" id="1_l2iee"]
+[ext_resource type="Script" uid="uid://dtymwghi3q400" path="res://samurai/samurai.gd" id="1_o3lbu"]
 [ext_resource type="Texture2D" uid="uid://oxsgphwsfmq0" path="res://samurai/img/IDLE.png" id="1_up0nt"]
+[ext_resource type="Texture2D" uid="uid://djhqmqxlq33dd" path="res://samurai/img/ATTACK 1.png" id="1_yrrbe"]
 [ext_resource type="Texture2D" uid="uid://eek0oj2xl00c" path="res://samurai/img/RUN.png" id="2_qm8kk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8bsl"]
+atlas = ExtResource("1_yrrbe")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad2qk"]
+atlas = ExtResource("1_yrrbe")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx0qp"]
+atlas = ExtResource("1_yrrbe")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snl7l"]
+atlas = ExtResource("1_yrrbe")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nic8c"]
+atlas = ExtResource("1_yrrbe")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwjq4"]
+atlas = ExtResource("1_yrrbe")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig51b"]
+atlas = ExtResource("1_yrrbe")
+region = Rect2(576, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8csp5"]
 atlas = ExtResource("1_l2iee")
@@ -124,6 +154,32 @@ region = Rect2(1440, 0, 96, 96)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_m8bsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad2qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx0qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snl7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nic8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwjq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig51b")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8csp5")
 }, {
 "duration": 1.0,
@@ -225,10 +281,22 @@ animations = [{
 "speed": 16.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrrbe"]
+size = Vector2(53, 72)
+
 [node name="samurai" type="CharacterBody2D" unique_id=1047257845]
+script = ExtResource("1_o3lbu")
 
 [node name="sprt_samurai" type="AnimatedSprite2D" parent="." unique_id=2069383495]
-scale = Vector2(2, 2)
+position = Vector2(-8, 1.5)
+scale = Vector2(2.1666667, 1.96875)
 sprite_frames = SubResource("SpriteFrames_b44ii")
-animation = &"hurt"
-frame_progress = 0.33504722
+animation = &"idle"
+frame_progress = 0.758692
+
+[node name="col_samurai" type="CollisionShape2D" parent="." unique_id=167860063]
+position = Vector2(-12.5, 35)
+shape = SubResource("RectangleShape2D_yrrbe")
+
+[node name="cam_samurai" type="Camera2D" parent="." unique_id=2071950860]
+limit_smoothed = true
