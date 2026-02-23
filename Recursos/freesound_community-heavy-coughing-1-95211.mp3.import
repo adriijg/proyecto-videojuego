@@ -2,11 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-<<<<<<< HEAD
-uid="uid://bfjgyhq7cb3qu"
-=======
 uid="uid://catwh3jcyun8p"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e
 path="res://.godot/imported/freesound_community-heavy-coughing-1-95211.mp3-e48ea0475aa905e3295f5273eddf27dc.mp3str"
 
 [deps]
