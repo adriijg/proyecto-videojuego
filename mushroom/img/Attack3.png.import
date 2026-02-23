@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Mushroom/Attack3.png.import
-uid="uid://cma8cagwqw6mq"
-path="res://.godot/imported/Attack3.png-9f44e3987d80471fc6ccc89d0a1fa793.ctex"
-=======
-uid="uid://blf6x8buofwug"
+uid="uid://bxygh064oyoau"
 path="res://.godot/imported/Attack3.png-b4babdcd6ff17bbb55bb83f7eabcd6a2.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:mushroom/img/Attack3.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Mushroom/Attack3.png.import
-source_file="res://Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Mushroom/Attack3.png"
-dest_files=["res://.godot/imported/Attack3.png-9f44e3987d80471fc6ccc89d0a1fa793.ctex"]
-=======
 source_file="res://mushroom/img/Attack3.png"
 dest_files=["res://.godot/imported/Attack3.png-b4babdcd6ff17bbb55bb83f7eabcd6a2.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:mushroom/img/Attack3.png.import
 
 [params]
 

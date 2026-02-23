@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/idle-06.png.import
-uid="uid://bhfd8bk8ai86l"
-path="res://.godot/imported/idle-06.png-3fe809e5aa14f7dd31957a9edc8ae3a9.ctex"
-=======
-uid="uid://clhfilg8rev8l"
+uid="uid://duylv7prfulqo"
 path="res://.godot/imported/idle-06.png-0397421e1570fcd6f28c64a37483193a.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/idle-06.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/idle-06.png.import
-source_file="res://Recursos/PixelPlatformerSet/Character/Sprite/idle-06.png"
-dest_files=["res://.godot/imported/idle-06.png-3fe809e5aa14f7dd31957a9edc8ae3a9.ctex"]
-=======
 source_file="res://bandit/img/idle-06.png"
 dest_files=["res://.godot/imported/idle-06.png-0397421e1570fcd6f28c64a37483193a.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/idle-06.png.import
 
 [params]
 

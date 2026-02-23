@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/run-05.png.import
-uid="uid://d0170ah6kdwr3"
-path="res://.godot/imported/run-05.png-98a07778f1c54c6b35eaf7cc4eefbabe.ctex"
-=======
-uid="uid://4e7tvjcjpmna"
+uid="uid://crtytsa1jitiq"
 path="res://.godot/imported/run-05.png-87e5cb7638dcd9ccf13a50850785f78d.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/run-05.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/run-05.png.import
-source_file="res://Recursos/PixelPlatformerSet/Character/Sprite/run-05.png"
-dest_files=["res://.godot/imported/run-05.png-98a07778f1c54c6b35eaf7cc4eefbabe.ctex"]
-=======
 source_file="res://bandit/img/run-05.png"
 dest_files=["res://.godot/imported/run-05.png-87e5cb7638dcd9ccf13a50850785f78d.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/run-05.png.import
 
 [params]
 
