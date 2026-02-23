@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/Animated Chests/Animated Chests/Chests.png.import
-uid="uid://d1kxj0cbjtppk"
-path="res://.godot/imported/Chests.png-737a656d5934b5347a2bc0a6e0925116.ctex"
-=======
-uid="uid://2bmhgc6tl3i0"
+uid="uid://b42r5xp1x35ew"
 path="res://.godot/imported/Chests.png-8eb0cf8a51847a322979b9f59d7bf937.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:chest/img/Chests.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/Animated Chests/Animated Chests/Chests.png.import
-source_file="res://Recursos/Animated Chests/Animated Chests/Chests.png"
-dest_files=["res://.godot/imported/Chests.png-737a656d5934b5347a2bc0a6e0925116.ctex"]
-=======
 source_file="res://chest/img/Chests.png"
 dest_files=["res://.godot/imported/Chests.png-8eb0cf8a51847a322979b9f59d7bf937.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:chest/img/Chests.png.import
 
 [params]
 

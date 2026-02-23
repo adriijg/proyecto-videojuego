@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/dead-02.png.import
-uid="uid://x0dem3irl2fn"
-path="res://.godot/imported/dead-02.png-2cf9d1946316b986f8ceecbefdca57a2.ctex"
-=======
-uid="uid://jo2kay2tqbc3"
+uid="uid://djmy54c0rqa3"
 path="res://.godot/imported/dead-02.png-dc5aa29c8fc0f942cd9055d46b35513e.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/dead-02.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/dead-02.png.import
-source_file="res://Recursos/PixelPlatformerSet/Character/Sprite/dead-02.png"
-dest_files=["res://.godot/imported/dead-02.png-2cf9d1946316b986f8ceecbefdca57a2.ctex"]
-=======
 source_file="res://bandit/img/dead-02.png"
 dest_files=["res://.godot/imported/dead-02.png-dc5aa29c8fc0f942cd9055d46b35513e.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/dead-02.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Goblin/Bomb_sprite.png.import
-uid="uid://3wljlwgniv01"
-path="res://.godot/imported/Bomb_sprite.png-471f5880f20f82f7bff488c3609d4aef.ctex"
-=======
-uid="uid://jie76ua8smbk"
+uid="uid://dsj8h3458lj0e"
 path="res://.godot/imported/Bomb_sprite.png-bc4226d79694c97194ccfa50d8a9fb53.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:goblin/img/Bomb_sprite.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Goblin/Bomb_sprite.png.import
-source_file="res://Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Goblin/Bomb_sprite.png"
-dest_files=["res://.godot/imported/Bomb_sprite.png-471f5880f20f82f7bff488c3609d4aef.ctex"]
-=======
 source_file="res://goblin/img/Bomb_sprite.png"
 dest_files=["res://.godot/imported/Bomb_sprite.png-bc4226d79694c97194ccfa50d8a9fb53.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:goblin/img/Bomb_sprite.png.import
 
 [params]
 
