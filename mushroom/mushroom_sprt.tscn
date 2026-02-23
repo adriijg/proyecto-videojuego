@@ -106,7 +106,8 @@ size = Vector2(21, 35)
 
 [node name="mushroom_sprt" type="AnimatedSprite2D" unique_id=1302085329]
 sprite_frames = SubResource("SpriteFrames_2i03a")
-animation = &"attack"
+animation = &"idle"
+frame_progress = 0.013124916
 
 [node name="coll_mushroom" type="CollisionShape2D" parent="." unique_id=1461413950]
 position = Vector2(0.5, 8.5)
