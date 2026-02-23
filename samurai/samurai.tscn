@@ -295,12 +295,17 @@ size = Vector2(31, 41)
 script = ExtResource("1_o3lbu")
 
 [node name="ani_samurai" type="AnimatedSprite2D" parent="." unique_id=2107522512]
+position = Vector2(59, 35)
 sprite_frames = SubResource("SpriteFrames_najcb")
 animation = &"idle"
 
 [node name="col_samurai" type="CollisionShape2D" parent="." unique_id=2005938801]
-position = Vector2(1.5, 14.5)
+position = Vector2(59, 49)
 shape = SubResource("RectangleShape2D_p422s")
 
 [node name="cam_samurai" type="Camera2D" parent="." unique_id=1359645750]
+limit_left = -1000
+limit_top = -273
+limit_right = 2200
+limit_bottom = 630
 limit_smoothed = true
