@@ -82,3 +82,8 @@ func update_col():
 	col_normal.disabled = false
 	col_run.disabled = (ani_samurai.animation != "run")
 	col_attack.disabled = not atacando or (ani_samurai.animation != "attack")
+	
+# Dentro de la detección de ataque del Samurai
+func _on_hitbox_espada_body_entered(body):
+	if body.has_method("recibir_danio"):
+		body.recibir_danio(1) # Le quitamos 1 de vida

@@ -95,12 +95,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkkfm"]
-size = Vector2(18, 33)
+size = Vector2(15, 33)
 
 [node name="goblin_spr" type="AnimatedSprite2D" unique_id=1171339253]
 sprite_frames = SubResource("SpriteFrames_qch50")
 animation = &"attack"
 
 [node name="coll_goblin" type="CollisionShape2D" parent="." unique_id=1394345266]
-position = Vector2(0, 9.5)
+position = Vector2(0.5, 9.5)
 shape = SubResource("RectangleShape2D_nkkfm")

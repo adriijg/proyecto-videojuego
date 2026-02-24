@@ -298,6 +298,7 @@ size = Vector2(20, 29)
 size = Vector2(46, 32)
 
 [node name="samurai" type="CharacterBody2D" unique_id=730656529]
+collision_layer = 2
 script = ExtResource("1_o3lbu")
 
 [node name="col_samurai_normal" type="CollisionShape2D" parent="." unique_id=2005938801]
@@ -309,9 +310,7 @@ shape = SubResource("RectangleShape2D_p422s")
 [node name="ani_samurai" type="AnimatedSprite2D" parent="Visual" unique_id=2107522512]
 position = Vector2(-1, -33)
 sprite_frames = SubResource("SpriteFrames_najcb")
-animation = &"attack"
-frame = 6
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="col_samurai_run" type="CollisionShape2D" parent="Visual" unique_id=1560536331]
 position = Vector2(4, -14.5)
