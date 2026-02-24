@@ -425,9 +425,14 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eicf1"]
+size = Vector2(12, 43)
+
 [node name="skeleton_sprt" type="AnimatedSprite2D" unique_id=1352148622]
 sprite_frames = SubResource("SpriteFrames_xoqxw")
-animation = &"walk"
-frame_progress = 0.3269999
+animation = &"idle"
+frame_progress = 0.97806585
 
 [node name="coll_skeleton" type="CollisionShape2D" parent="." unique_id=1092187425]
+position = Vector2(-3, 10.5)
+shape = SubResource("RectangleShape2D_eicf1")

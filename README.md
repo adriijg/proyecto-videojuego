@@ -8,6 +8,8 @@ El juego consiste en un mundo lleno de de desafíos y diferentes enemigos, donde
 
 Nuestro personaje poco a poco se irá encontrándose a si mismo hasta llegar al último cofre, el cual se encuentra en el templo del dragón, donde se encuentra el tesoro más valioso de todos, una foto de su hija fallecida.
 
+Para poder soltar su carga, deberá ir recogiendo fragmentos de fotos por los diferentes niveles, los cuales se encuentran en cofres escondidos por el mundo. Cada fragmento de foto representa un recuerdo de su hija, y al recolectarlos, el samurai podrá ir reconstruyendo su historia y encontrar la paz interior que tanto busca.
+
 ### Características.
 
 Ejemplo de como la hitbox cambia según la animación del personaje, en este caso el samurai. En la imagen se puede ver como la hitbox se adapta a la posición del personaje, lo que permite una mejor detección de colisiones y una jugabilidad más fluida.

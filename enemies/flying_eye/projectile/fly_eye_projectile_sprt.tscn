@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqy1dl48k3wqm"]
 
-[ext_resource type="Texture2D" uid="uid://b05pdadfynuhf" path="res://flying_eye/img/projectile_sprite.png" id="1_l6wht"]
+[ext_resource type="Texture2D" uid="uid://uxi54hyp8fjy" path="res://enemies/flying_eye/img/projectile_sprite.png" id="1_l6wht"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1dhj"]
 atlas = ExtResource("1_l6wht")
