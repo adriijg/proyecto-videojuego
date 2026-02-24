@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dalwacahaetna" path="res://nivel1/nivel_facil.tscn" id="1_8a1ph"]
 [ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="2_wjl7u"]
 [ext_resource type="PackedScene" uid="uid://c5ih706qf1tls" path="res://background/fondo.tscn" id="3_wjl7u"]
+[ext_resource type="PackedScene" uid="uid://dnyehjdym8spf" path="res://chest/area_cofre.tscn" id="4_7uceq"]
 
 [node name="environment" type="Node2D" unique_id=1386414784]
 
@@ -14,3 +15,6 @@ position = Vector2(-925, 109)
 [node name="fondo" parent="." unique_id=42834104 instance=ExtResource("3_wjl7u")]
 scale = Vector2(0.56, 0.4)
 transform = Transform2D(0.56, 0, 0, 0.4, 0, 0)
+
+[node name="area_cofre" parent="." unique_id=1010804529 instance=ExtResource("4_7uceq")]
+position = Vector2(1744, 304)
