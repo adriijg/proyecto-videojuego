@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://rm8d1grrel57"]
+
+[ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="1_he8p4"]
+
+[node name="Test" type="Node2D" unique_id=1353472312]
+
+[node name="samurai" parent="." unique_id=730656529 instance=ExtResource("1_he8p4")]
+position = Vector2(-45, -22)

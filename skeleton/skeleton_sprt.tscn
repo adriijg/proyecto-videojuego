@@ -440,7 +440,7 @@ frame_progress = 0.2661181
 position = Vector2(-2.5, 9)
 shape = SubResource("RectangleShape2D_r211t")
 
-[node name="coll_damage_skeleton" type="CollisionShape2D" parent="." unique_id=434292372]
+[node name="coll_skeleton_attack" type="CollisionShape2D" parent="." unique_id=434292372]
 position = Vector2(27, 0)
 shape = SubResource("RectangleShape2D_7hwnr")
 disabled = true

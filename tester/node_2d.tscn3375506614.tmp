@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://dlvptpgk6qcbg"]
 
 [ext_resource type="Texture2D" uid="uid://dcaaaoq4ffhb1" path="res://Recursos/Dungeon Tile Set.png" id="1_u6yq3"]
-[ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="2_u6yq3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mk2d0"]
 texture = ExtResource("1_u6yq3")
@@ -166,6 +165,3 @@ sources/0 = SubResource("TileSetAtlasSource_mk2d0")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=418573923]
 tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAABAP//AAACAAEAAAACAP//AAADAAEAAAADAP//AAABAAEAAAAEAP//AAACAAEAAAAFAP//AAADAAEAAAAGAP//AAABAAEAAAAHAP//AAACAAEAAAAIAP//AAADAAEAAAAJAP//AAABAAEAAAAKAP//AAACAAEAAAALAP//AAADAAEAAAAMAP//AAABAAEAAAANAP//AAACAAEAAAAOAP//AAADAAEAAAAPAP//AAABAAEAAAAQAP//AAACAAEAAAARAP//AAADAAEAAAASAP//AAABAAEAAAATAP//AAACAAEAAAAUAP//AAADAAEAAAAVAP//AAABAAEAAAAWAP//AAACAAEAAAAXAP//AAADAAEAAAAYAP//AAABAAEAAAAZAP//AAACAAEAAAAaAP//AAADAAEAAAAAAPz/AAADAAEAAAAAAP3/AAADAAIAAAAAAP7/AAADAAMAAAAAAPn/AAADAAEAAAAAAPr/AAADAAIAAAAAAPv/AAADAAMAAAAAAPb/AAADAAEAAAAAAPf/AAADAAIAAAAAAPj/AAADAAMAAAA=")
 tile_set = SubResource("TileSet_tiaa6")
-
-[node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_u6yq3")]
-position = Vector2(110, -101)
