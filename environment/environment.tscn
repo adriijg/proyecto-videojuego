@@ -8,6 +8,7 @@
 [node name="environment" type="Node2D" unique_id=1386414784]
 
 [node name="nivel_facil" parent="." unique_id=1062196207 instance=ExtResource("1_8a1ph")]
+script = null
 
 [node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_wjl7u")]
 position = Vector2(-925, 109)

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/attack-02.png.import
-uid="uid://bi0slkbijaqls"
-path="res://.godot/imported/attack-02.png-09b109cca9c6e6dca921c4d19bc17c88.ctex"
-=======
-uid="uid://covpm4xgfy81u"
+uid="uid://dadbef6g37koo"
 path="res://.godot/imported/attack-02.png-c33dff0c659f985dd796fc711c014524.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/attack-02.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/PixelPlatformerSet/Character/Sprite/attack-02.png.import
-source_file="res://Recursos/PixelPlatformerSet/Character/Sprite/attack-02.png"
-dest_files=["res://.godot/imported/attack-02.png-09b109cca9c6e6dca921c4d19bc17c88.ctex"]
-=======
 source_file="res://bandit/img/attack-02.png"
 dest_files=["res://.godot/imported/attack-02.png-c33dff0c659f985dd796fc711c014524.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:bandit/img/attack-02.png.import
 
 [params]
 

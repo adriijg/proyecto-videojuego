@@ -9,10 +9,19 @@ extends CharacterBody2D
 @export var air_friction = 700
 
 @onready var ani_samurai = $ani_samurai
+var cam_samurai  # Para la cámara
 
 func _ready() -> void:
-	add_to_group("samurai")   # ESTE es el único _ready válido
+	add_to_group("samurai")
+	cam_samurai = $cam_samurai
 
+# 🔥 FUNCIÓN QUE FALTA PARA EL COFRE
+func desactivar_camara_samurai():
+	if cam_samurai:
+		cam_samurai.enabled = false
+		print("🔒 Cámara samurai desactivada")
+
+# TUS FUNCIONES ORIGINALES COMPLETAS:
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta * gravity_scale
@@ -32,7 +41,7 @@ func handle_jump():
 			velocity.y = jump_force
 
 func handle_air_acceleration(input_axis, delta):
-	if is_on_floor(): return
+	if not is_on_floor(): return
 	if input_axis != 0:
 		velocity.x = move_toward(velocity.x, speed * input_axis, air_acceleration * delta)
 

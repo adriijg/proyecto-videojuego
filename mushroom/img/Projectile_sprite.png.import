@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Mushroom/Projectile_sprite.png.import
-uid="uid://d1wwswr56cu10"
-path="res://.godot/imported/Projectile_sprite.png-0edb3ab97225e9ad744784c8072b8d80.ctex"
-=======
-uid="uid://byvnlqqneck30"
+uid="uid://capm2hgqbr41f"
 path="res://.godot/imported/Projectile_sprite.png-8548c6750d83d0c6d07dc55cb62e3e71.ctex"
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:mushroom/img/Projectile_sprite.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Mushroom/Projectile_sprite.png.import
-source_file="res://Recursos/Monster_Creatures_Fantasy/Monster_Creatures_Fantasy(Version 1.3)/Mushroom/Projectile_sprite.png"
-dest_files=["res://.godot/imported/Projectile_sprite.png-0edb3ab97225e9ad744784c8072b8d80.ctex"]
-=======
 source_file="res://mushroom/img/Projectile_sprite.png"
 dest_files=["res://.godot/imported/Projectile_sprite.png-8548c6750d83d0c6d07dc55cb62e3e71.ctex"]
->>>>>>> 899335bdf60e16f0692e36a8813e9634c7eaca5e:mushroom/img/Projectile_sprite.png.import
 
 [params]
 
