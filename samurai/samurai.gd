@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 250
 @export var gravity_scale = 2.0 
-@export var jump_force = -500
+@export var jump_force = -600
 
 @onready var visual = $Visual
 @onready var ani_samurai = $Visual/ani_samurai
@@ -13,8 +13,18 @@ extends CharacterBody2D
 # Variable de control para saber si estamos en medio de un tajo
 var atacando = false
 
+var cam_samurai  # Para la cámara
+
 func _ready():
 	ani_samurai.animation_finished.connect(_on_animation_finished)
+	add_to_group("samurai")
+	cam_samurai = $cam_samurai
+	
+# FUNCIÓN QUE FALTA PARA EL COFRE
+func desactivar_camara_samurai():
+	if cam_samurai:
+		cam_samurai.enabled = false
+		print("Cámara samurai desactivada")
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

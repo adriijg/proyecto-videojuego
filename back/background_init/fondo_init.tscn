@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dj82mq7s8s7u8"]
+
+[ext_resource type="Texture2D" uid="uid://cheoxhjqv5j0s" path="res://back/background_init/img/1.png" id="1_w2gnu"]
+[ext_resource type="Texture2D" uid="uid://wbuwcoudwafi" path="res://back/background_init/img/2.png" id="2_qctwp"]
+[ext_resource type="Texture2D" uid="uid://dwmrrg64xj5vd" path="res://back/background_init/img/3.png" id="3_s2ok3"]
+[ext_resource type="Texture2D" uid="uid://cnvrmd7t08340" path="res://back/background_init/img/4.png" id="4_t3ytt"]
+
+[node name="fondo_init" type="ParallaxBackground" unique_id=68299060]
+
+[node name="layer_1" type="ParallaxLayer" parent="." unique_id=1974721951]
+position = Vector2(0, 1)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="sprt_1" type="Sprite2D" parent="layer_1" unique_id=2021232981]
+position = Vector2(0.00012242794, -1)
+scale = Vector2(1.9999996, 1.9969137)
+texture = ExtResource("1_w2gnu")
+centered = false
+
+[node name="layer_2" type="ParallaxLayer" parent="." unique_id=739793214]
+position = Vector2(0, 1)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="sprt_2" type="Sprite2D" parent="layer_2" unique_id=1804990166]
+position = Vector2(0, -1)
+scale = Vector2(2, 1.9969136)
+texture = ExtResource("2_qctwp")
+centered = false
+
+[node name="layer_3" type="ParallaxLayer" parent="." unique_id=1752585075]
+position = Vector2(0, 1)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="sprt_3" type="Sprite2D" parent="layer_3" unique_id=188232756]
+position = Vector2(1, -0.9999695)
+scale = Vector2(1.9969134, 1.9999999)
+texture = ExtResource("3_s2ok3")
+centered = false
+
+[node name="layer_4" type="ParallaxLayer" parent="." unique_id=1286511008]
+position = Vector2(0, 1)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="sprt_4" type="Sprite2D" parent="layer_4" unique_id=2023975053]
+position = Vector2(0, 1.0000002)
+scale = Vector2(2, 1.9938271)
+texture = ExtResource("4_t3ytt")
+centered = false
