@@ -437,8 +437,6 @@ radius = 159.5901
 
 [node name="skeleton" type="CharacterBody2D" unique_id=1015477422]
 script = ExtResource("1_o2orx")
-vida = null
-speed = null
 
 [node name="col_skeleton_normal" type="CollisionShape2D" parent="." unique_id=1607172238]
 position = Vector2(-3, 10)
@@ -449,7 +447,7 @@ shape = SubResource("RectangleShape2D_2b7ve")
 [node name="ani_skeleton" type="AnimatedSprite2D" parent="Visual" unique_id=1835678159]
 sprite_frames = SubResource("SpriteFrames_hoo18")
 animation = &"walk"
-frame_progress = 0.4147868
+frame_progress = 0.12752578
 
 [node name="AttackArea" type="Area2D" parent="Visual" unique_id=1837659043]
 collision_layer = 0

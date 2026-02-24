@@ -27,16 +27,26 @@ func _physics_process(delta):
 		# y los rayos giren con él
 		visual.scale.x = dir
 		
-		# LÓGICA DE SUELO:
-		# Usamos el rayo derecho si dir es 1, y el izquierdo si dir es -1
-		var rayo_activo = ray_r if dir > 0 else ray_l
-		
-		if rayo_activo.is_colliding():
+		# Usamos siempre el mismo porque al estar en el centro 
+		# y dentro de Visual, siempre apuntará hacia abajo del esqueleto.
+		if ray_r.is_colliding():
 			velocity.x = dir * speed
 			ani.play("walk")
 		else:
-			velocity.x = 0 # Se frena en el borde para no caer
+			velocity.x = 0
 			ani.play("idle")
+		
+		# LÓGICA DE SUELO:# Sustituye tu lógica de rayos por esta:
+		var rayo_activo
+		if dir > 0:
+			# Si voy a la derecha y el cuerpo mira a la derecha, 
+			# el que está delante es el que pusiste a la derecha (ray_r)
+			rayo_activo = ray_r 
+		else:
+			# Si voy a la izquierda y el cuerpo mira a la izquierda,
+			# por el efecto espejo, el que ahora está delante es el ray_r también
+			# (o el ray_l según cómo los posicionaste)
+			rayo_activo = ray_r
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		if not atacando:
