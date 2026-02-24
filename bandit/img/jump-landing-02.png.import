@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://3xqpfbrn7q8v"
+=======
+uid="uid://bqsts8w6r53na"
+>>>>>>> features_david
 path="res://.godot/imported/jump-landing-02.png-de7a873df80c151fae449fd0a5085c0f.ctex"
 metadata={
 "vram_texture": false

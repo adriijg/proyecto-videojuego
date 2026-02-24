@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b5dctws2p5x8q"
+=======
+uid="uid://busqc4v4x45wq"
+>>>>>>> features_david
 path="res://.godot/imported/jump-01.png-304f98cf79dcab54f578d6150db9283d.ctex"
 metadata={
 "vram_texture": false

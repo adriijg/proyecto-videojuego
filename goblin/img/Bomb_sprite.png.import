@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dsj8h3458lj0e"
+=======
+uid="uid://cte36edwfnos0"
+>>>>>>> features_david
 path="res://.godot/imported/Bomb_sprite.png-bc4226d79694c97194ccfa50d8a9fb53.ctex"
 metadata={
 "vram_texture": false

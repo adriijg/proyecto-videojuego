@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bb4413igecgoy"
+=======
+uid="uid://hnibymmkpls1"
+>>>>>>> features_david
 path="res://.godot/imported/idle-03.png-79afd381d72a535f4051a266345a3900.ctex"
 metadata={
 "vram_texture": false
