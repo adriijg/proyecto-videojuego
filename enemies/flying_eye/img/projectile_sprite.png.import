@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dme7xqxog6rjl"
-path="res://.godot/imported/projectile_sprite.png-5f11fd2339f05a84768dc4a38df2e470.ctex"
+path="res://.godot/imported/projectile_sprite.png-1d308773c2f09064fc1047cdab26055b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://flying_eye/img/projectile_sprite.png"
-dest_files=["res://.godot/imported/projectile_sprite.png-5f11fd2339f05a84768dc4a38df2e470.ctex"]
+source_file="res://enemies/flying_eye/img/projectile_sprite.png"
+dest_files=["res://.godot/imported/projectile_sprite.png-1d308773c2f09064fc1047cdab26055b.ctex"]
 
 [params]
 

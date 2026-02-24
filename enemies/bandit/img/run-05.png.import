@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crtytsa1jitiq"
-path="res://.godot/imported/run-05.png-87e5cb7638dcd9ccf13a50850785f78d.ctex"
+path="res://.godot/imported/run-05.png-ff9b2dec69a0b1a1ac03ee752e39079a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bandit/img/run-05.png"
-dest_files=["res://.godot/imported/run-05.png-87e5cb7638dcd9ccf13a50850785f78d.ctex"]
+source_file="res://enemies/bandit/img/run-05.png"
+dest_files=["res://.godot/imported/run-05.png-ff9b2dec69a0b1a1ac03ee752e39079a.ctex"]
 
 [params]
 

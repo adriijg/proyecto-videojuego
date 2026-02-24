@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djmy54c0rqa3"
-path="res://.godot/imported/dead-02.png-dc5aa29c8fc0f942cd9055d46b35513e.ctex"
+path="res://.godot/imported/dead-02.png-d0b84c87b41adcd243e84dc1cf242314.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bandit/img/dead-02.png"
-dest_files=["res://.godot/imported/dead-02.png-dc5aa29c8fc0f942cd9055d46b35513e.ctex"]
+source_file="res://enemies/bandit/img/dead-02.png"
+dest_files=["res://.godot/imported/dead-02.png-d0b84c87b41adcd243e84dc1cf242314.ctex"]
 
 [params]
 

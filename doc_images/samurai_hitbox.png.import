@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwfp0m6oea1o3"
-path="res://.godot/imported/samurai_hitbox.png-13f499772faff7f8bd43db959fa2820d.ctex"
+path="res://.godot/imported/samurai_hitbox.png-d0993c264c9e5afbe23ec4e6eea1b27a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://doc/samurai_hitbox.png"
-dest_files=["res://.godot/imported/samurai_hitbox.png-13f499772faff7f8bd43db959fa2820d.ctex"]
+source_file="res://doc_images/samurai_hitbox.png"
+dest_files=["res://.godot/imported/samurai_hitbox.png-d0993c264c9e5afbe23ec4e6eea1b27a.ctex"]
 
 [params]
 

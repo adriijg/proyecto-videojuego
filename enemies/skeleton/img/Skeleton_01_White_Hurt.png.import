@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjcsqr21m7cyr"
-path="res://.godot/imported/Skeleton_01_White_Hurt.png-94e0641dafae84bdd168abb6a30734d4.ctex"
+path="res://.godot/imported/Skeleton_01_White_Hurt.png-27f9d79dc2f7fa1fe245502bafdaff01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://skeleton/img/Skeleton_01_White_Hurt.png"
-dest_files=["res://.godot/imported/Skeleton_01_White_Hurt.png-94e0641dafae84bdd168abb6a30734d4.ctex"]
+source_file="res://enemies/skeleton/img/Skeleton_01_White_Hurt.png"
+dest_files=["res://.godot/imported/Skeleton_01_White_Hurt.png-27f9d79dc2f7fa1fe245502bafdaff01.ctex"]
 
 [params]
 
