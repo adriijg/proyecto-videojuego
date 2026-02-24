@@ -300,18 +300,8 @@ size = Vector2(46, 32)
 [node name="samurai" type="CharacterBody2D" unique_id=730656529]
 script = ExtResource("1_o3lbu")
 
-<<<<<<< HEAD
 [node name="col_samurai_normal" type="CollisionShape2D" parent="." unique_id=2005938801]
 position = Vector2(0, -16)
-=======
-[node name="ani_samurai" type="AnimatedSprite2D" parent="." unique_id=2107522512]
-position = Vector2(59, 35)
-sprite_frames = SubResource("SpriteFrames_najcb")
-animation = &"attack"
-
-[node name="col_samurai" type="CollisionShape2D" parent="." unique_id=2005938801]
-position = Vector2(59, 49)
->>>>>>> features_david
 shape = SubResource("RectangleShape2D_p422s")
 
 [node name="Visual" type="Node2D" parent="." unique_id=1855679065]
@@ -332,7 +322,6 @@ shape = SubResource("RectangleShape2D_xgx4o")
 disabled = true
 
 [node name="cam_samurai" type="Camera2D" parent="." unique_id=1359645750]
-zoom = Vector2(0.8, 0.8)
 limit_left = -1000
 limit_top = -273
 limit_right = 2200
