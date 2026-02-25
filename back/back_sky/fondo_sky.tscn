@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b6xr3riumo383"]
+
+[ext_resource type="Texture2D" uid="uid://ngw26bs3qoxe" path="res://back/back_sky/img/sky.png" id="1_oi4iq"]
+[ext_resource type="Texture2D" uid="uid://bo7svbf5c6cjq" path="res://back/back_sky/img/sea.png" id="2_dm0yq"]
+[ext_resource type="Texture2D" uid="uid://5p6myg6vr8ko" path="res://back/back_sky/img/clouds.png" id="3_d048f"]
+
+[node name="fondo_sky" type="ParallaxBackground" unique_id=1795727730]
+
+[node name="layer1" type="ParallaxLayer" parent="." unique_id=1199354027]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sky" type="Sprite2D" parent="layer1" unique_id=708054778]
+scale = Vector2(6.517857, 2.1282895)
+texture = ExtResource("1_oi4iq")
+centered = false
+
+[node name="layer2" type="ParallaxLayer" parent="." unique_id=2095740654]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sea" type="Sprite2D" parent="layer2" unique_id=413234322]
+position = Vector2(1.1920929e-07, 262.00003)
+scale = Vector2(6.5089283, 4)
+texture = ExtResource("2_dm0yq")
+centered = false
+
+[node name="layer3" type="ParallaxLayer" parent="." unique_id=1761855604]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Clouds" type="Sprite2D" parent="layer3" unique_id=902196050]
+position = Vector2(3.0517578e-05, 332.00003)
+scale = Vector2(1.338983, 1.338983)
+texture = ExtResource("3_d048f")
+centered = false

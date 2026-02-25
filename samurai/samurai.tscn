@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://oxsgphwsfmq0" path="res://samurai/img/IDLE.png" id="1_up0nt"]
 [ext_resource type="Texture2D" uid="uid://djhqmqxlq33dd" path="res://samurai/img/ATTACK 1.png" id="1_yrrbe"]
 [ext_resource type="Texture2D" uid="uid://eek0oj2xl00c" path="res://samurai/img/RUN.png" id="2_qm8kk"]
+[ext_resource type="PackedScene" uid="uid://kkhouw1q0hki" path="res://samurai/addons/life_bar.tscn" id="6_xgx4o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p422s"]
 size = Vector2(12, 31.5)
@@ -331,3 +332,8 @@ limit_top = -273
 limit_right = 2200
 limit_bottom = 630
 limit_smoothed = true
+
+[node name="life_bar" parent="cam_samurai" unique_id=21053273 instance=ExtResource("6_xgx4o")]
+physics_interpolation_mode = 2
+position = Vector2(-507, -244)
+scale = Vector2(2, 2)

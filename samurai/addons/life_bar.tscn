@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://kkhouw1q0hki"]
+
+[ext_resource type="Texture2D" uid="uid://d2en506iulxtb" path="res://samurai/addons/04.png" id="1_5tex4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfbd2"]
+atlas = ExtResource("1_5tex4")
+region = Rect2(48, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gew2t"]
+atlas = ExtResource("1_5tex4")
+region = Rect2(96, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbqq2"]
+atlas = ExtResource("1_5tex4")
+region = Rect2(144, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cgav"]
+atlas = ExtResource("1_5tex4")
+region = Rect2(192, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgl1l"]
+atlas = ExtResource("1_5tex4")
+region = Rect2(240, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmnow"]
+atlas = ExtResource("1_5tex4")
+region = Rect2(288, 64, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwco5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfbd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gew2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbqq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cgav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgl1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmnow")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="life_bar" type="Node2D" unique_id=21053273]
+
+[node name="life_sprt" type="AnimatedSprite2D" parent="." unique_id=1123942247]
+sprite_frames = SubResource("SpriteFrames_cwco5")
+frame = 5
+frame_progress = 1.0

@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c1pqt25uqchbi" path="res://niveles/mapa_init/img/Birch2.png" id="7_0tsau"]
 [ext_resource type="PackedScene" uid="uid://dnyehjdym8spf" path="res://chest/area_cofre.tscn" id="8_l4gve"]
 [ext_resource type="PackedScene" uid="uid://dj82mq7s8s7u8" path="res://back/background_init/fondo_init.tscn" id="9_6sur1"]
-[ext_resource type="Texture2D" uid="uid://du27mfeiyrfv7" path="res://niveles/mapa_init/img/sun.png" id="10_g5rgj"]
 [ext_resource type="Texture2D" uid="uid://df2usyvqtjm6e" path="res://niveles/mapa_init/img/Weeping Willow1.png" id="11_uv3mt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nuvni"]
@@ -2352,8 +2351,4 @@ tile_set = SubResource("TileSet_tg1ys")
 position = Vector2(1592, -80)
 
 [node name="fondo_init" parent="." unique_id=68299060 instance=ExtResource("9_6sur1")]
-
-[node name="sun" type="Sprite2D" parent="." unique_id=170374938]
-position = Vector2(1101, -556)
-scale = Vector2(4.53125, 4.53125)
-texture = ExtResource("10_g5rgj")
+visible = false
