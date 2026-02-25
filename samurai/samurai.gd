@@ -78,26 +78,30 @@ func iniciar_ataque():
 	# 4. OPCIONAL: Puedes desactivarla aquí o dejar que update_col lo haga al terminar
 	
 func recibir_danio(cantidad):
+	if esta_muerto: return # No puede recibir daño si ya está muerto
+	
 	vida_actual -= cantidad
+	if health_bar: health_bar.value = vida_actual
 	
-	# Actualizamos visualmente la barra de vida
-	if health_bar.has_method("set_value"):
-		health_bar.value = vida_actual
-	
-	# Si la vida llega a cero, activamos las partículas
 	if vida_actual <= 0:
 		morir()
 	else:
-		# Opcional: Pequeño parpadeo rojo para avisar del golpe
 		ani_samurai.modulate = Color.RED
 		await get_tree().create_timer(0.1).timeout
 		ani_samurai.modulate = Color.WHITE
 	
 func morir():
-	if particles: # Primero comprobamos si el nodo existe
+	if esta_muerto: return # SEGURIDAD: Evita que las partículas salten dos veces
+	
+	esta_muerto = true # Declaramos el estado de muerte inmediatamente
+	
+	if particles:
 		particles.emitting = true
 
 	ani_samurai.visible = false
+	# Desactivamos colisiones para que los pinchos dejen de detectarlo
+	col_normal.set_deferred("disabled", true) 
+	
 	set_physics_process(false)
 
 	await get_tree().create_timer(1.5).timeout
