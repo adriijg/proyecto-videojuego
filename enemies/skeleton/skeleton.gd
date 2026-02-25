@@ -63,8 +63,10 @@ func recibir_danio(cantidad):
 	if vida <= 0:
 		morir()
 	else:
+		# Al recibir un golpe, activamos 'atacando' para que no camine
+		# mientras hace la animación de dolor (hurt)
 		atacando = true
-		ani.play("hurt") # Usa la animación 'hurt' de tu panel
+		ani.play("hurt")
 
 func morir():
 	muerto = true
@@ -92,6 +94,7 @@ func _on_attack_area_body_entered(body):
 		ani.play("attack_1") # Usa 'attack_1' de tu panel
 
 func _on_ani_skeleton_animation_finished():
-	# Este paso es vital para que el esqueleto recupere el control
+	# IMPORTANTE: Esta función debe "liberar" al esqueleto 
+	# tanto si termina de atacar como si termina de dolerse.
 	if ani.animation == "attack_1" or ani.animation == "hurt":
-		atacando = false
+		atacando = false # <--- Aquí es donde deja de estar "tonto"
