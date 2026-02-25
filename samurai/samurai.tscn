@@ -333,7 +333,11 @@ limit_right = 2200
 limit_bottom = 630
 limit_smoothed = true
 
-[node name="life_bar" parent="cam_samurai" unique_id=21053273 instance=ExtResource("6_xgx4o")]
-physics_interpolation_mode = 2
-position = Vector2(-507, -244)
+[node name="hud" type="CanvasLayer" parent="." unique_id=847546967]
+
+[node name="life_bar" parent="hud" unique_id=21053273 instance=ExtResource("6_xgx4o")]
+offset_left = 89.0
+offset_top = 25.0
+offset_right = 90.0
+offset_bottom = 26.0
 scale = Vector2(2, 2)

@@ -52,7 +52,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="life_bar" type="Node2D" unique_id=21053273]
+[node name="life_bar" type="TextureProgressBar" unique_id=701815925]
 
 [node name="life_sprt" type="AnimatedSprite2D" parent="." unique_id=1123942247]
 sprite_frames = SubResource("SpriteFrames_cwco5")
