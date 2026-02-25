@@ -336,8 +336,8 @@ limit_smoothed = true
 [node name="hud" type="CanvasLayer" parent="." unique_id=847546967]
 
 [node name="life_bar" parent="hud" unique_id=21053273 instance=ExtResource("6_xgx4o")]
-offset_left = 89.0
-offset_top = 25.0
-offset_right = 90.0
-offset_bottom = 26.0
+offset_left = 131.0
+offset_top = 28.0
+offset_right = 132.0
+offset_bottom = 29.0
 scale = Vector2(2, 2)

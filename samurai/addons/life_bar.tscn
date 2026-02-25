@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kkhouw1q0hki"]
 
 [ext_resource type="Texture2D" uid="uid://d2en506iulxtb" path="res://samurai/addons/04.png" id="1_5tex4"]
+[ext_resource type="Texture2D" uid="uid://oyybu7h77jqq" path="res://samurai/addons/hearth.png" id="2_hfbd2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfbd2"]
 atlas = ExtResource("1_5tex4")
@@ -53,8 +54,16 @@ animations = [{
 }]
 
 [node name="life_bar" type="TextureProgressBar" unique_id=701815925]
+offset_left = 45.0
+offset_right = 46.0
+offset_bottom = 1.0
 
 [node name="life_sprt" type="AnimatedSprite2D" parent="." unique_id=1123942247]
 sprite_frames = SubResource("SpriteFrames_cwco5")
 frame = 5
 frame_progress = 1.0
+
+[node name="hearth" type="Sprite2D" parent="." unique_id=785379136]
+position = Vector2(-45, 0)
+scale = Vector2(0.06899996, 0.06899996)
+texture = ExtResource("2_hfbd2")
