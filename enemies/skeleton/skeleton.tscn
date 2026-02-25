@@ -459,12 +459,15 @@ shape = SubResource("RectangleShape2D_o2orx")
 disabled = true
 
 [node name="ray_right" type="RayCast2D" parent="Visual" unique_id=413247350]
+visible = false
 position = Vector2(4, 0)
 
 [node name="ray_left" type="RayCast2D" parent="Visual" unique_id=2073439957]
+visible = false
 position = Vector2(-9, 0)
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=2136768451]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
