@@ -16,3 +16,4 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	# CAMBIO DE ESCENA
 	get_tree().change_scene_to_file("res://nivel2/nivel_medio.tscn")
+ 

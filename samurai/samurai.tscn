@@ -299,7 +299,7 @@ size = Vector2(46, 32)
 size = Vector2(20, 29)
 
 [node name="samurai" type="CharacterBody2D" unique_id=730656529]
-collision_layer = 2
+collision_layer = 3
 script = ExtResource("1_o3lbu")
 
 [node name="col_samurai_normal" type="CollisionShape2D" parent="." unique_id=2005938801]
