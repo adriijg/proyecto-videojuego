@@ -264,7 +264,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d55f5")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_1",
 "speed": 8.0
 }, {
@@ -447,7 +447,9 @@ shape = SubResource("RectangleShape2D_2b7ve")
 
 [node name="ani_skeleton" type="AnimatedSprite2D" parent="Visual" unique_id=1835678159]
 sprite_frames = SubResource("SpriteFrames_hoo18")
-animation = &"death"
+animation = &"attack_1"
+frame = 9
+frame_progress = 1.0
 
 [node name="AttackArea" type="Area2D" parent="Visual" unique_id=1837659043]
 collision_layer = 0

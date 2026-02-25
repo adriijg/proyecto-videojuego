@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://boaah2svt6wip"]
+
+[ext_resource type="Texture2D" uid="uid://bevftobusjwnh" path="res://enemies/spikes/img/4 Conjoined Spikes.png" id="1_u5qqe"]
+[ext_resource type="Script" uid="uid://dbrt454omxnjg" path="res://enemies/spikes/4_spikes.gd" id="1_xopxe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xopxe"]
+size = Vector2(164, 36)
+
+[sub_resource type="GDScript" id="GDScript_15o4m"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="4spikes" type="Area2D" unique_id=151842057]
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+script = ExtResource("1_xopxe")
+
+[node name="spikes_sprite" type="Sprite2D" parent="." unique_id=807484558]
+texture = ExtResource("1_u5qqe")
+
+[node name="col_spikes" type="CollisionShape2D" parent="." unique_id=12126100]
+shape = SubResource("RectangleShape2D_xopxe")
+script = SubResource("GDScript_15o4m")
+
+[node name="Timer" type="Timer" parent="." unique_id=2067938754]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

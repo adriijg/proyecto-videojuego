@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ds4e888a07qih"]
+
+[ext_resource type="PackedScene" uid="uid://boaah2svt6wip" path="res://enemies/spikes/4_spikes.tscn" id="1_5nnfi"]
+[ext_resource type="Texture2D" uid="uid://bx6qlwim2d8ob" path="res://enemies/spikes/img/Individual Spike.png" id="2_j4s4d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nnfi"]
+size = Vector2(68, 36)
+
+[node name="spike" unique_id=151842057 instance=ExtResource("1_5nnfi")]
+metadata/_edit_group_ = true
+
+[node name="spikes_sprite" parent="." index="0" unique_id=807484558]
+texture = ExtResource("2_j4s4d")
+
+[node name="col_spikes" parent="." index="1" unique_id=12126100]
+shape = SubResource("RectangleShape2D_5nnfi")

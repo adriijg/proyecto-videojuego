@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b8wgwvf85m3e6" path="res://enemies/skeleton/skeleton.tscn" id="3_jeaan"]
 [ext_resource type="PackedScene" uid="uid://c5tkpopusbv67" path="res://back/back_maligno/fondo_maligno.tscn" id="4_mk2d0"]
 [ext_resource type="PackedScene" uid="uid://boaah2svt6wip" path="res://enemies/spikes/4_spikes.tscn" id="5_tiaa6"]
+[ext_resource type="PackedScene" uid="uid://ds4e888a07qih" path="res://enemies/spikes/spike.tscn" id="6_uys8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mk2d0"]
 texture = ExtResource("1_u6yq3")
@@ -173,10 +174,6 @@ tile_set = SubResource("TileSet_tiaa6")
 
 [node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_u6yq3")]
 position = Vector2(110, -101)
-speed = 250
-gravity_scale = 2.0
-jump_force = -600
-vida_max = 3
 
 [node name="skeleton" parent="." unique_id=1015477422 instance=ExtResource("3_jeaan")]
 position = Vector2(413, -49)
@@ -187,3 +184,6 @@ transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="4spikes" parent="." unique_id=151842057 instance=ExtResource("5_tiaa6")]
 position = Vector2(231, -25)
+
+[node name="spike" parent="." unique_id=1818921599 instance=ExtResource("6_uys8m")]
+position = Vector2(34, -25)

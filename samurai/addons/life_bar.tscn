@@ -62,8 +62,6 @@ offset_bottom = 1.0
 position = Vector2(-4, 0)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_cwco5")
-frame = 5
-frame_progress = 1.0
 
 [node name="hearth" type="Sprite2D" parent="." unique_id=785379136]
 position = Vector2(-45, 0)

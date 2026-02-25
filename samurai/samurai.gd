@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed = 250
 @export var gravity_scale = 2.0 
 @export var jump_force = -600
-@export var vida_max = 3
+@export var vida_max = 5 # Ahora configurado a 5
 
 @onready var visual = $Visual
 @onready var ani_samurai = $Visual/ani_samurai
@@ -11,12 +11,12 @@ extends CharacterBody2D
 @onready var col_run = $Visual/col_samurai_run
 @onready var col_attack = $Visual/AreaAtaque/col_samurai_attack
 @onready var area_ataque = $Visual/AreaAtaque
-@onready var particles = $Visual/muerte_particulas
-@onready var health_bar = $hud/life_bar # Asegúrate de que la ruta sea correcta
+@onready var particles = $Visual/muerte_particulas # Ruta corregida según tu estructura
+@onready var health_bar = $hud/life_bar/life_sprt # Apunta al AnimatedSprite2D hijo
 
 var atacando = false
 var cam_samurai 
-var vida_actual = 3
+var vida_actual = 5
 var esta_muerto = false
 
 func _ready():
@@ -24,8 +24,14 @@ func _ready():
 		ani_samurai.animation_finished.connect(_on_animation_finished)
 	add_to_group("samurai")
 	cam_samurai = $cam_samurai
+	
+	# Inicializamos la barra al empezar
+	if health_bar:
+		health_bar.frame = 0 
 
 func _physics_process(delta: float) -> void:
+	if esta_muerto: return
+	
 	if not is_on_floor():
 		velocity.y += 980.0 * delta * gravity_scale
 	
@@ -44,7 +50,6 @@ func _physics_process(delta: float) -> void:
 	update_col()
 
 func update_animation(input_axis):
-	# Usamos is_action_just_pressed para no atacar mil veces por segundo
 	if Input.is_action_just_pressed("atacar") and not atacando:
 		iniciar_ataque()
 		return
@@ -61,47 +66,47 @@ func iniciar_ataque():
 	if atacando: return
 	atacando = true
 	ani_samurai.play("attack")
-	
-	# 1. ACTIVAMOS la hitbox físicamente
 	col_attack.disabled = false 
-	
-	# 2. Esperamos un instante para que el dibujo de la espada coincida con el golpe
 	await get_tree().create_timer(0.1).timeout
 	
-	# 3. COMPROBACIÓN: ¿Hay enemigos dentro del área ahora que está activa?
 	var cuerpos = area_ataque.get_overlapping_bodies()
 	for cuerpo in cuerpos:
 		if cuerpo.has_method("recibir_danio") and cuerpo != self:
 			cuerpo.recibir_danio(1)
-			print("¡Hitbox activa y golpeando a: ", cuerpo.name, "!")
-	
-	# 4. OPCIONAL: Puedes desactivarla aquí o dejar que update_col lo haga al terminar
 	
 func recibir_danio(cantidad):
-	if esta_muerto: return # No puede recibir daño si ya está muerto
+	if esta_muerto: return
 	
 	vida_actual -= cantidad
-	if health_bar: health_bar.value = vida_actual
+	
+	# Sincronización exacta:
+	# Vida 5 -> Frame 0 (Lleno)
+	# Vida 4 -> Frame 1
+	# Vida 3 -> Frame 2
+	# Vida 2 -> Frame 3
+	# Vida 1 -> Frame 4
+	# Vida 0 -> Frame 5 (Vacío)
+	if health_bar:
+		var nuevo_frame = vida_max - vida_actual
+		health_bar.frame = clamp(nuevo_frame, 0, 5) # clamp asegura que no se pase del límite
 	
 	if vida_actual <= 0:
 		morir()
 	else:
+		# Feedback visual de golpe (Parpadeo rojo)
 		ani_samurai.modulate = Color.RED
 		await get_tree().create_timer(0.1).timeout
 		ani_samurai.modulate = Color.WHITE
 	
 func morir():
-	if esta_muerto: return # SEGURIDAD: Evita que las partículas salten dos veces
-	
-	esta_muerto = true # Declaramos el estado de muerte inmediatamente
+	if esta_muerto: return
+	esta_muerto = true 
 	
 	if particles:
-		particles.emitting = true
+		particles.emitting = true # Activa tus ajustes del inspector
 
 	ani_samurai.visible = false
-	# Desactivamos colisiones para que los pinchos dejen de detectarlo
 	col_normal.set_deferred("disabled", true) 
-	
 	set_physics_process(false)
 
 	await get_tree().create_timer(1.5).timeout
@@ -113,8 +118,6 @@ func _on_animation_finished():
 		ani_samurai.play("idle")
 
 func update_col():
-	# Tu lógica original para activar la hitbox
 	col_normal.disabled = false
 	if col_run: col_run.disabled = (ani_samurai.animation != "run")
-	# col_attack se activa SOLAMENTE cuando atacamos
 	if col_attack: col_attack.disabled = not atacando
