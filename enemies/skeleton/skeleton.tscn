@@ -340,7 +340,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w4v5m")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 8.0
 }, {
@@ -360,7 +360,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q0xdx")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt",
 "speed": 5.0
 }, {
@@ -436,6 +436,7 @@ size = Vector2(56, 19)
 radius = 159.5901
 
 [node name="skeleton" type="CharacterBody2D" unique_id=1015477422]
+collision_layer = 2
 script = ExtResource("1_o2orx")
 
 [node name="col_skeleton_normal" type="CollisionShape2D" parent="." unique_id=1607172238]
@@ -446,8 +447,7 @@ shape = SubResource("RectangleShape2D_2b7ve")
 
 [node name="ani_skeleton" type="AnimatedSprite2D" parent="Visual" unique_id=1835678159]
 sprite_frames = SubResource("SpriteFrames_hoo18")
-animation = &"walk"
-frame_progress = 0.12752578
+animation = &"death"
 
 [node name="AttackArea" type="Area2D" parent="Visual" unique_id=1837659043]
 collision_layer = 0

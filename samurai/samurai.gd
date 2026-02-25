@@ -8,23 +8,18 @@ extends CharacterBody2D
 @onready var ani_samurai = $Visual/ani_samurai
 @onready var col_normal = $col_samurai_normal
 @onready var col_run = $Visual/col_samurai_run
-@onready var col_attack = $Visual/col_samurai_attack
+@onready var col_attack = $Visual/AreaAtaque/col_samurai_attack
+@onready var area_ataque = $Visual/AreaAtaque
 
-# Variable de control para saber si estamos en medio de un tajo
 var atacando = false
-
-var cam_samurai  # Para la cámara
+var cam_samurai 
 
 func _ready():
-	ani_samurai.animation_finished.connect(_on_animation_finished)
+	# Conectamos la señal de forma segura
+	if not ani_samurai.animation_finished.is_connected(_on_animation_finished):
+		ani_samurai.animation_finished.connect(_on_animation_finished)
 	add_to_group("samurai")
 	cam_samurai = $cam_samurai
-	
-# FUNCIÓN QUE FALTA PARA EL COFRE
-func desactivar_camara_samurai():
-	if cam_samurai:
-		cam_samurai.enabled = false
-		print("Cámara samurai desactivada")
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -35,7 +30,6 @@ func _physics_process(delta: float) -> void:
 
 	var input_axis = Input.get_axis("mover_izquierda", "mover_derecha")
 	
-	# Si estamos atacando, el personaje se detiene
 	if atacando:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	else:
@@ -46,44 +40,47 @@ func _physics_process(delta: float) -> void:
 	update_col()
 
 func update_animation(input_axis):
-	# 1. SI SE PULSA EL BOTÓN Y NO ESTAMOS ATACANDO YA
-	if Input.is_action_pressed("atacar") and not atacando:
+	# Usamos is_action_just_pressed para no atacar mil veces por segundo
+	if Input.is_action_just_pressed("atacar") and not atacando:
 		iniciar_ataque()
 		return
 
-	# 2. BLOQUEO MIENTRAS ATACA
-	if atacando:
-		return
+	if atacando: return
 
-	# 3. MOVIMIENTO NORMAL
 	if input_axis != 0:
 		visual.scale.x = 1 if input_axis > 0 else -1
-		if is_on_floor():
-			ani_samurai.play("run")
+		if is_on_floor(): ani_samurai.play("run")
 	elif is_on_floor():
 		ani_samurai.play("idle")
 
 func iniciar_ataque():
+	if atacando: return
 	atacando = true
 	ani_samurai.play("attack")
+	
+	# 1. ACTIVAMOS la hitbox físicamente
+	col_attack.disabled = false 
+	
+	# 2. Esperamos un instante para que el dibujo de la espada coincida con el golpe
+	await get_tree().create_timer(0.1).timeout
+	
+	# 3. COMPROBACIÓN: ¿Hay enemigos dentro del área ahora que está activa?
+	var cuerpos = area_ataque.get_overlapping_bodies()
+	for cuerpo in cuerpos:
+		if cuerpo.has_method("recibir_danio") and cuerpo != self:
+			cuerpo.recibir_danio(1)
+			print("¡Hitbox activa y golpeando a: ", cuerpo.name, "!")
+	
+	# 4. OPCIONAL: Puedes desactivarla aquí o dejar que update_col lo haga al terminar
 
 func _on_animation_finished():
 	if ani_samurai.animation == "attack":
-		# Si al terminar la animación SIGUE pulsado, encadenamos otro
-		if Input.is_action_pressed("atacar"):
-			ani_samurai.play("attack")
-		else:
-			# Si soltó el botón, liberamos el movimiento
-			atacando = false
-			ani_samurai.play("idle")
+		atacando = false
+		ani_samurai.play("idle")
 
 func update_col():
-	# Si atacando es true, la colisión de ataque se activa
+	# Tu lógica original para activar la hitbox
 	col_normal.disabled = false
-	col_run.disabled = (ani_samurai.animation != "run")
-	col_attack.disabled = not atacando or (ani_samurai.animation != "attack")
-	
-# Dentro de la detección de ataque del Samurai
-func _on_hitbox_espada_body_entered(body):
-	if body.has_method("recibir_danio"):
-		body.recibir_danio(1) # Le quitamos 1 de vida
+	if col_run: col_run.disabled = (ani_samurai.animation != "run")
+	# col_attack se activa SOLAMENTE cuando atacamos
+	if col_attack: col_attack.disabled = not atacando

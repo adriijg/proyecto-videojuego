@@ -173,5 +173,3 @@ position = Vector2(110, -101)
 
 [node name="skeleton" parent="." unique_id=1015477422 instance=ExtResource("3_jeaan")]
 position = Vector2(413, -49)
-vida = 2
-speed = 50.0
