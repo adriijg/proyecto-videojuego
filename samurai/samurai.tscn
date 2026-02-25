@@ -293,7 +293,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xgx4o"]
-size = Vector2(46, 32)
+size = Vector2(59, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3lbu"]
 size = Vector2(20, 29)
@@ -301,6 +301,10 @@ size = Vector2(20, 29)
 [node name="samurai" type="CharacterBody2D" unique_id=730656529]
 collision_layer = 3
 script = ExtResource("1_o3lbu")
+speed = null
+gravity_scale = null
+jump_force = null
+vida_max = null
 
 [node name="col_samurai_normal" type="CollisionShape2D" parent="." unique_id=2005938801]
 position = Vector2(0, -16)
@@ -311,13 +315,15 @@ shape = SubResource("RectangleShape2D_p422s")
 [node name="ani_samurai" type="AnimatedSprite2D" parent="Visual" unique_id=2107522512]
 position = Vector2(-1, -33)
 sprite_frames = SubResource("SpriteFrames_najcb")
-animation = &"idle"
+animation = &"attack"
+frame = 6
+frame_progress = 1.0
 
 [node name="AreaAtaque" type="Area2D" parent="Visual" unique_id=1822083082]
 collision_mask = 2
 
 [node name="col_samurai_attack" type="CollisionShape2D" parent="Visual/AreaAtaque" unique_id=587165765]
-position = Vector2(19, -16)
+position = Vector2(25.5, -16)
 shape = SubResource("RectangleShape2D_xgx4o")
 disabled = true
 
@@ -325,6 +331,17 @@ disabled = true
 position = Vector2(4, -14.5)
 shape = SubResource("RectangleShape2D_o3lbu")
 disabled = true
+
+[node name="muerte_particulas" type="CPUParticles2D" parent="Visual" unique_id=738198603]
+modulate = Color(0.9098039, 0, 0.08627451, 1)
+scale = Vector2(3, 3)
+emitting = false
+amount = 500
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+initial_velocity_min = 150.0
+initial_velocity_max = 250.0
 
 [node name="cam_samurai" type="Camera2D" parent="." unique_id=1359645750]
 limit_bottom = 630
@@ -338,3 +355,5 @@ offset_top = 28.0
 offset_right = 132.0
 offset_bottom = 29.0
 scale = Vector2(2, 2)
+
+[connection signal="animation_finished" from="Visual/ani_samurai" to="." method="_on_ani_samurai_animation_finished"]
