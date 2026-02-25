@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brl8wm64d0q8k"
-path="res://.godot/imported/dead-02.png-d0b84c87b41adcd243e84dc1cf242314.ctex"
+uid="uid://bj2wx3y2my6t8"
+path="res://.godot/imported/tileset.png-ad8ca4519b4d1801aab9578e8446dbe3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/bandit/img/dead-02.png"
-dest_files=["res://.godot/imported/dead-02.png-d0b84c87b41adcd243e84dc1cf242314.ctex"]
+source_file="res://niveles/mapa_tutorial/img/tileset.png"
+dest_files=["res://.godot/imported/tileset.png-ad8ca4519b4d1801aab9578e8446dbe3.ctex"]
 
 [params]
 

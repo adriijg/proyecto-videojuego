@@ -327,9 +327,6 @@ shape = SubResource("RectangleShape2D_o3lbu")
 disabled = true
 
 [node name="cam_samurai" type="Camera2D" parent="." unique_id=1359645750]
-limit_left = -1000
-limit_top = -273
-limit_right = 2200
 limit_bottom = 630
 limit_smoothed = true
 

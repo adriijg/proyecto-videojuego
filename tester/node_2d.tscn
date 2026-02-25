@@ -177,6 +177,5 @@ position = Vector2(110, -101)
 position = Vector2(413, -49)
 
 [node name="fondo_maligno" parent="." unique_id=1422233237 instance=ExtResource("4_mk2d0")]
-offset = Vector2(0, -150)
-scale = Vector2(2.25, 2.25)
-transform = Transform2D(2.25, 0, 0, 2.25, 0, -150)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)

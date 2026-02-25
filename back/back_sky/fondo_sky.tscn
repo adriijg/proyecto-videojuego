@@ -8,7 +8,7 @@
 
 [node name="layer1" type="ParallaxLayer" parent="." unique_id=1199354027]
 motion_scale = Vector2(0.1, 0.1)
-motion_mirroring = Vector2(1152, 0)
+motion_mirroring = Vector2(544, 0)
 
 [node name="Sky" type="Sprite2D" parent="layer1" unique_id=708054778]
 scale = Vector2(6.517857, 2.1282895)
@@ -17,7 +17,7 @@ centered = false
 
 [node name="layer2" type="ParallaxLayer" parent="." unique_id=2095740654]
 motion_scale = Vector2(0.2, 0.2)
-motion_mirroring = Vector2(1152, 0)
+motion_mirroring = Vector2(544, 0)
 
 [node name="Sea" type="Sprite2D" parent="layer2" unique_id=413234322]
 position = Vector2(1.1920929e-07, 262.00003)
@@ -27,7 +27,7 @@ centered = false
 
 [node name="layer3" type="ParallaxLayer" parent="." unique_id=1761855604]
 motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(1152, 0)
+motion_mirroring = Vector2(544, 0)
 
 [node name="Clouds" type="Sprite2D" parent="layer3" unique_id=902196050]
 position = Vector2(3.0517578e-05, 332.00003)
