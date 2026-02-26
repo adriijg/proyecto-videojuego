@@ -451,31 +451,28 @@ animation = &"attack_1"
 frame = 9
 frame_progress = 1.0
 
-[node name="AttackArea" type="Area2D" parent="Visual" unique_id=1837659043]
-collision_layer = 0
+[node name="AreaAtaqueEnemigo" type="Area2D" parent="Visual" unique_id=1837659043]
 collision_mask = 3
 
-[node name="AreaAtaqueEnemigo" type="CollisionShape2D" parent="Visual/AttackArea" unique_id=1886086554]
+[node name="col_golpe" type="CollisionShape2D" parent="Visual/AreaAtaqueEnemigo" unique_id=1886086554]
 position = Vector2(19, -0.5)
 shape = SubResource("RectangleShape2D_o2orx")
-disabled = true
 
 [node name="ray_right" type="RayCast2D" parent="Visual" unique_id=413247350]
-visible = false
 position = Vector2(4, 0)
 
 [node name="ray_left" type="RayCast2D" parent="Visual" unique_id=2073439957]
-visible = false
 position = Vector2(-9, 0)
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=2136768451]
-visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="col_detect" type="CollisionShape2D" parent="DetectionArea" unique_id=1245331728]
+visible = false
 shape = SubResource("CircleShape2D_o2orx")
 
 [connection signal="animation_finished" from="Visual/ani_skeleton" to="." method="_on_ani_skeleton_animation_finished"]
-[connection signal="body_entered" from="Visual/AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_entered" from="Visual/AreaAtaqueEnemigo" to="." method="_on_area_ataque_enemigo_body_entered"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

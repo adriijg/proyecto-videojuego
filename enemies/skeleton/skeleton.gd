@@ -12,10 +12,9 @@ var muerto = false
 @onready var ray_r = $Visual/ray_right
 @onready var ray_l = $Visual/ray_left
 
-# CORRECCIÓN DE RUTA: 
-# Según tu imagen, AreaAtaqueEnemigo está dentro de AttackArea.
-@onready var area_golpe = $Visual/AttackArea/AreaAtaqueEnemigo
-@onready var col_golpe = $Visual/AttackArea/AreaAtaqueEnemigo/CollisionShape2D
+# Rutas actualizadas a tu jerarquía actual
+@onready var area_golpe = $Visual/AreaAtaqueEnemigo
+@onready var col_golpe = $Visual/AreaAtaqueEnemigo/col_ataque_ske
 
 func _physics_process(delta):
 	if muerto: return 
@@ -33,8 +32,6 @@ func _physics_process(delta):
 		else:
 			velocity.x = 0
 			ani.play("idle")
-		
-		var rayo_activo = ray_r
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		if not atacando:
@@ -62,32 +59,32 @@ func morir():
 # --- SEÑALES ---
 
 func _on_detection_area_body_entered(body):
-	if body.is_in_group("samurai"):
+	if body.name == "samurai":
 		player = body
 
 func _on_detection_area_body_exited(body):
 	if body == player:
 		player = null
 
-func _on_attack_area_body_entered(body):
-	# Esta señal debe venir del Area2D grande (AttackArea)
-	if body.is_in_group("samurai") and not atacando and not muerto:
+# Esta es la señal del rectángulo blanco que vemos en tus imágenes
+func _on_area_ataque_enemigo_body_entered(body):
+	if body.name == "samurai" and not atacando and not muerto:
+		print("¡Samurai detectado en el rango de ataque!")
 		iniciar_ataque_esqueleto()
 
 func iniciar_ataque_esqueleto():
-	print("1. Intento atacar") # Si esto sale, la señal de detección funciona.
 	atacando = true
 	ani.play("attack_1")
 	
+	# Esperamos al frame del tajo (ajusta el tiempo si el daño sale antes/después)
 	await get_tree().create_timer(0.4).timeout 
 	
-	var cuerpos = area_golpe.get_overlapping_bodies()
-	print("2. Cuerpos detectados: ", cuerpos.size()) # Si sale 0, el problema es la MASK o MONITORING.
-	
-	for cuerpo in cuerpos:
-		print("3. He tocado a: ", cuerpo.name) # Si sale el nombre pero no quita vida, el problema es el GRUPO.
-		if cuerpo.is_in_group("samurai"):
-			cuerpo.recibir_danio(1)
+	if not muerto and area_golpe:
+		var cuerpos = area_golpe.get_overlapping_bodies()
+		for cuerpo in cuerpos:
+			if cuerpo.name == "samurai":
+				cuerpo.recibir_danio(1) # Esto restará 1 vida y moverá 1 frame tu HUD
+				print("¡DAÑO REALIZADO AL SAMURAI!")
 
 func _on_ani_skeleton_animation_finished():
 	if ani.animation == "attack_1" or ani.animation == "hurt":
