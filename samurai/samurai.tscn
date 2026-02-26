@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://oxsgphwsfmq0" path="res://samurai/img/IDLE.png" id="1_up0nt"]
 [ext_resource type="Texture2D" uid="uid://djhqmqxlq33dd" path="res://samurai/img/ATTACK 1.png" id="1_yrrbe"]
 [ext_resource type="Texture2D" uid="uid://eek0oj2xl00c" path="res://samurai/img/RUN.png" id="2_qm8kk"]
-[ext_resource type="Texture2D" uid="uid://bxxpr5jbe4q4c" path="res://enemies/goblin/img/DEATH.png" id="3_p0ogg"]
+[ext_resource type="Texture2D" uid="uid://dct6f67hb2m4r" path="res://samurai/img/DEATH.png" id="3_p0ogg"]
 [ext_resource type="PackedScene" uid="uid://kkhouw1q0hki" path="res://samurai/addons/life_bar.tscn" id="6_xgx4o"]
+[ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="8_jo6nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p422s"]
 size = Vector2(12, 31.5)
@@ -470,5 +471,7 @@ offset_top = 28.0
 offset_right = 132.0
 offset_bottom = 29.0
 scale = Vector2(2, 2)
+
+[node name="photoWin" parent="hud" unique_id=430329256 instance=ExtResource("8_jo6nw")]
 
 [connection signal="animation_finished" from="Visual/ani_samurai" to="." method="_on_ani_samurai_animation_finished"]

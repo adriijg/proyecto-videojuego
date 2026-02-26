@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://d2sb324d2goql"]
+
+[ext_resource type="Script" uid="uid://cetfxba40dthi" path="res://collectionable/photo/photo_win.gd" id="1_h5di5"]
+[ext_resource type="Texture2D" uid="uid://b7fnvfmaa6hpf" path="res://collectionable/photo/img/photo.png" id="1_qdhn2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdhn2"]
+size = Vector2(307, 366)
+
+[node name="photoWin" type="Area2D" unique_id=430329256]
+position = Vector2(110.11282, 153.92267)
+script = ExtResource("1_h5di5")
+
+[node name="sprt_photo" type="Sprite2D" parent="." unique_id=1068857979]
+position = Vector2(-137, -235)
+texture = ExtResource("1_qdhn2")
+
+[node name="col_photo" type="CollisionShape2D" parent="." unique_id=2100968291]
+position = Vector2(-156, -237)
+shape = SubResource("RectangleShape2D_qdhn2")
+
+[node name="contador" type="Control" parent="." unique_id=514570089]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hud" type="HBoxContainer" parent="contador" unique_id=1750214828]
+layout_mode = 0
+offset_left = 887.8872
+offset_top = -101.92267
+offset_right = 927.8872
+offset_bottom = -61.92267
+
+[node name="contador_label" type="Label" parent="contador/hud" unique_id=2056063664]
+layout_mode = 2
+text = "0"
+
+[node name="sprt_contador_contador" type="Sprite2D" parent="contador/hud" unique_id=213400225]
+position = Vector2(-75.99997, 22)
+scale = Vector2(0.23311253, 0.23592268)
+texture = ExtResource("1_qdhn2")

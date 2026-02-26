@@ -18,6 +18,7 @@ var atacando = false
 var cam_samurai 
 var vida_actual = 5
 var esta_muerto = false
+var puntos_totales: int = 0
 
 func _ready():
 	if not ani_samurai.animation_finished.is_connected(_on_animation_finished):
@@ -141,3 +142,12 @@ func update_col():
 	col_normal.disabled = false
 	if col_run: col_run.disabled = (ani_samurai.animation != "run")
 	if col_attack: col_attack.disabled = not atacando
+
+# Añade esta función al script del samurai
+func sumar_puntos(cantidad: int):
+	puntos_totales += cantidad
+	print("Puntos totales: ", puntos_totales)
+	
+	# Opcional: Actualizar UI del contador
+	if has_node("hud/contador_label"):
+		$hud/contador_label.text = "Puntos: " + str(puntos_totales)

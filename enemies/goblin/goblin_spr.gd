@@ -2,13 +2,12 @@ extends StaticBody2D
 
 @export var bomba_scene: PackedScene
 @export var cadencia: float = 2.0
-@export var vida: int = 2 # Añadimos la salud aquí
+@export var vida: int = 2 
 var samurai = null
 
 @onready var ani_goblin = $ani_goblin
 @onready var mark_goblin = $mark_goblin
 @onready var timer_goblin = $timer_goblin
-# Referencias a los nodos de colisión y muerte
 @onready var area_muerte = $area_muerte
 @onready var col_goblin = $col_goblin
 
