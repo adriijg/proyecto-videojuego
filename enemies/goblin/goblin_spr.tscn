@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dqaeyu1y81wl3" path="res://enemies/goblin/img/Attack3.png" id="1_nkkfm"]
 [ext_resource type="Script" uid="uid://c5g2iho50fd1x" path="res://enemies/goblin/goblin_spr.gd" id="1_t8wds"]
 [ext_resource type="PackedScene" uid="uid://csnr5n8vsuxqf" path="res://enemies/goblin/projectile/goblin_bomb.tscn" id="2_lcmo6"]
+[ext_resource type="Texture2D" uid="uid://bxxpr5jbe4q4c" path="res://enemies/goblin/img/DEATH.png" id="3_0swc1"]
 [ext_resource type="Script" uid="uid://ckdqd782fn6v3" path="res://enemies/goblin/area_muerte.gd" id="4_wltgf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmvdy"]
@@ -53,6 +54,70 @@ region = Rect2(1500, 0, 150, 150)
 atlas = ExtResource("1_nkkfm")
 region = Rect2(1650, 0, 150, 150)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dv5q"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt1q5"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyatf"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t047b"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dqhp"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1uca"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eggs6"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rsc7"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_betb1"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(384, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3gik"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(432, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl0nq"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(480, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5n7s"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(528, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_com0c"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(576, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if7i5"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(624, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tbef"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(672, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4ndt"]
+atlas = ExtResource("3_0swc1")
+region = Rect2(720, 0, 48, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_8dv5q"]
 animations = [{
 "frames": [{
@@ -95,6 +160,59 @@ animations = [{
 "loop": true,
 "name": &"attack",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dv5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt1q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyatf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t047b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dqhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1uca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eggs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rsc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_betb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3gik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl0nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5n7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_com0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if7i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tbef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4ndt")
+}],
+"loop": false,
+"name": &"death_soul",
+"speed": 16.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wt1q5"]
@@ -109,8 +227,7 @@ bomba_scene = ExtResource("2_lcmo6")
 
 [node name="ani_goblin" type="AnimatedSprite2D" parent="." unique_id=663835843]
 sprite_frames = SubResource("SpriteFrames_8dv5q")
-animation = &"attack"
-frame_progress = 0.56183535
+animation = &"death_soul"
 
 [node name="col_goblin" type="CollisionShape2D" parent="." unique_id=1016973611]
 position = Vector2(-4, 9)

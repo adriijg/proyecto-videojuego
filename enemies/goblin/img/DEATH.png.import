@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dct6f67hb2m4r"
-path="res://.godot/imported/DEATH.png-0c9f77fed8ec7029356295f1120896ac.ctex"
+uid="uid://bxxpr5jbe4q4c"
+path="res://.godot/imported/DEATH.png-6d8554801c78620c661c267746aede65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://samurai/img/DEATH.png"
-dest_files=["res://.godot/imported/DEATH.png-0c9f77fed8ec7029356295f1120896ac.ctex"]
+source_file="res://enemies/goblin/img/DEATH.png"
+dest_files=["res://.godot/imported/DEATH.png-6d8554801c78620c661c267746aede65.ctex"]
 
 [params]
 
