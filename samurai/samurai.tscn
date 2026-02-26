@@ -473,5 +473,6 @@ offset_bottom = 29.0
 scale = Vector2(2, 2)
 
 [node name="photoWin" parent="hud" unique_id=430329256 instance=ExtResource("8_jo6nw")]
+visible = false
 
 [connection signal="animation_finished" from="Visual/ani_samurai" to="." method="_on_ani_samurai_animation_finished"]

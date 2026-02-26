@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds4e888a07qih" path="res://enemies/spikes/spike.tscn" id="6_oru8t"]
 [ext_resource type="PackedScene" uid="uid://2ng3c6v14q57" path="res://enemies/goblin/goblin_spr.tscn" id="7_a8ro1"]
 [ext_resource type="PackedScene" uid="uid://vwajvj1fslel" path="res://collectionable/bottle/life_flask.tscn" id="8_b0re2"]
+[ext_resource type="PackedScene" uid="uid://6mf1xu7p820m" path="res://enemies/flying_eye/flying_eye_sprt.tscn" id="9_28v5d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mk2d0"]
 texture = ExtResource("1_gd57x")
@@ -198,3 +199,6 @@ position = Vector2(527, -32)
 
 [node name="life_flask2" parent="." unique_id=683121358 instance=ExtResource("8_b0re2")]
 position = Vector2(927, -31)
+
+[node name="area_flying_eye" parent="." unique_id=1913054269 instance=ExtResource("9_28v5d")]
+position = Vector2(1054, -86)

@@ -175,10 +175,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_sla58"]
 radius = 9.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ubv5c"]
-radius = 10.049875
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhorh"]
+radius = 158.02847
 
 [node name="area_flying_eye" type="Area2D" unique_id=1913054269]
+collision_mask = 2
 script = ExtResource("3_pl5gk")
 proyectil_scene = ExtResource("4_qhorh")
 
@@ -196,9 +197,14 @@ position = Vector2(6, 28)
 
 [node name="timer_flying_eye" type="Timer" parent="." unique_id=1233886675]
 
-[node name="col_muerte" type="CollisionShape2D" parent="." unique_id=314511976]
-position = Vector2(6, 3)
-shape = SubResource("CircleShape2D_ubv5c")
-
 [node name="area_flying_eye_project" parent="." unique_id=898105169 instance=ExtResource("4_qhorh")]
 position = Vector2(6, 29)
+collision_layer = 0
+collision_mask = 2
+
+[node name="area_deteccion" type="Area2D" parent="." unique_id=78157609]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_deteccion" unique_id=1747562075]
+position = Vector2(6, 3)
+shape = SubResource("CircleShape2D_qhorh")
