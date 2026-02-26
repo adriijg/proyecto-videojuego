@@ -178,8 +178,6 @@ position = Vector2(110, -101)
 
 [node name="skeleton" parent="." unique_id=1015477422 instance=ExtResource("3_jeaan")]
 position = Vector2(413, -49)
-vida = 2
-speed = 50.0
 
 [node name="fondo_maligno" parent="." unique_id=1422233237 instance=ExtResource("4_mk2d0")]
 scale = Vector2(2, 2)

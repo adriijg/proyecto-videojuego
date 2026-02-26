@@ -438,8 +438,6 @@ radius = 159.5901
 [node name="skeleton" type="CharacterBody2D" unique_id=1015477422]
 collision_layer = 2
 script = ExtResource("1_o2orx")
-vida = null
-speed = null
 
 [node name="col_skeleton_normal" type="CollisionShape2D" parent="." unique_id=1607172238]
 position = Vector2(-3, 10)

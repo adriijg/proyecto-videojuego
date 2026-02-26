@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://oxsgphwsfmq0" path="res://samurai/img/IDLE.png" id="1_up0nt"]
 [ext_resource type="Texture2D" uid="uid://djhqmqxlq33dd" path="res://samurai/img/ATTACK 1.png" id="1_yrrbe"]
 [ext_resource type="Texture2D" uid="uid://eek0oj2xl00c" path="res://samurai/img/RUN.png" id="2_qm8kk"]
-[ext_resource type="Texture2D" uid="uid://bxxpr5jbe4q4c" path="res://samurai/img/DEATH.png" id="3_p0ogg"]
+[ext_resource type="Texture2D" uid="uid://bxxpr5jbe4q4c" path="res://enemies/goblin/img/DEATH.png" id="3_p0ogg"]
 [ext_resource type="PackedScene" uid="uid://kkhouw1q0hki" path="res://samurai/addons/life_bar.tscn" id="6_xgx4o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p422s"]
@@ -411,7 +411,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xgx4o"]
-size = Vector2(59, 32)
+size = Vector2(65.21739, 28.52174)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3lbu"]
 size = Vector2(20, 29)
@@ -430,13 +430,15 @@ shape = SubResource("RectangleShape2D_p422s")
 [node name="ani_samurai" type="AnimatedSprite2D" parent="Visual" unique_id=2107522512]
 position = Vector2(-1, -33)
 sprite_frames = SubResource("SpriteFrames_najcb")
-animation = &"run"
+animation = &"attack"
+frame = 6
+frame_progress = 1.0
 
 [node name="AreaAtaque" type="Area2D" parent="Visual" unique_id=1822083082]
 collision_mask = 2
 
 [node name="col_samurai_attack" type="CollisionShape2D" parent="Visual/AreaAtaque" unique_id=587165765]
-position = Vector2(25.5, -16)
+position = Vector2(24.78261, -17.73913)
 shape = SubResource("RectangleShape2D_xgx4o")
 disabled = true
 
