@@ -73,6 +73,26 @@ func iniciar_ataque():
 	for cuerpo in cuerpos:
 		if cuerpo.has_method("recibir_danio") and cuerpo != self:
 			cuerpo.recibir_danio(1)
+
+func curar(cantidad):
+	if esta_muerto: return
+	
+	# Sumamos la vida sin pasar del máximo
+	vida_actual += cantidad
+	if vida_actual > vida_max:
+		vida_actual = vida_max
+	
+	# Actualizamos la barra de vida (frames)
+	# Si Vida 5 -> Frame 0, entonces: 5 - 5 = 0
+	if health_bar:
+		var nuevo_frame = vida_max - vida_actual
+		health_bar.frame = clamp(nuevo_frame, 0, 5)
+	
+	# Feedback visual: Parpadeo Verde (Curación)
+	ani_samurai.modulate = Color.GREEN
+	await get_tree().create_timer(0.1).timeout
+	ani_samurai.modulate = Color.WHITE
+	print("Samurai curado. Vida actual: ", vida_actual)
 	
 func recibir_danio(cantidad):
 	if esta_muerto: return

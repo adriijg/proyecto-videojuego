@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://vwajvj1fslel"]
+
+[ext_resource type="Texture2D" uid="uid://bbjhpgx7s1487" path="res://collectionable/bottle/img/Health potion.png" id="1_fxqky"]
+[ext_resource type="Script" uid="uid://76nj73pa2j6g" path="res://collectionable/bottle/life_flask.gd" id="1_t6376"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6376"]
+
+[node name="life_flask" type="Area2D" unique_id=625741569]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_t6376")
+
+[node name="HealthPotion" type="Sprite2D" parent="." unique_id=2038094586]
+texture = ExtResource("1_fxqky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=512688302]
+shape = SubResource("CircleShape2D_t6376")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
