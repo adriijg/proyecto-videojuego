@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 [node name="4spikes" type="Area2D" unique_id=151842057]
 scale = Vector2(0.5, 0.5)
 collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_xopxe")
 
 [node name="spikes_sprite" type="Sprite2D" parent="." unique_id=807484558]

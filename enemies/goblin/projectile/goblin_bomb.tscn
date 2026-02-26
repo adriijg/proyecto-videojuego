@@ -90,6 +90,20 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_erg6y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khf5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx5nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erg6y")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mj1dr")
@@ -148,14 +162,14 @@ animations = [{
 radius = 6.0
 
 [node name="area_bomb" type="Area2D" unique_id=1614485125]
-collision_layer = 2
-collision_mask = 5
+collision_layer = 8
+collision_mask = 3
 script = ExtResource("1_khf5j")
 
 [node name="ani_bomb" type="AnimatedSprite2D" parent="." unique_id=2085563443]
 position = Vector2(-2, -4)
 sprite_frames = SubResource("SpriteFrames_mm2x8")
-animation = &"explosion"
+frame_progress = 0.07267373
 
 [node name="col_bomb" type="CollisionShape2D" parent="." unique_id=1116292894]
 position = Vector2(2, 0)

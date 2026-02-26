@@ -14,7 +14,6 @@ var samurai = null
 func _ready():
 	body_entered.connect(_on_body_entered)
 	area_entered.connect(_on_area_entered)
-	# Busca samurai al inicio
 	samurai = get_tree().get_first_node_in_group("samurai")
 
 func iniciar(dir: Vector2):
@@ -41,10 +40,12 @@ func _physics_process(delta):
 		explotar()
 
 func _on_body_entered(body):
-	if body.is_in_group("samurai"):
-		body.morir()
-	elif body is StaticBody2D or body is TileMap:
+	# CAMBIO 2: Cambiar morir() por recibir_danio(1)
+	if body.is_in_group("samurai") or body.name == "samurai":
+		if body.has_method("recibir_danio"):
+			body.recibir_danio(1) 
 		explotar()
+	# CAMBIO 3: Simplificar la detección de suelo para que no pete con TileMapLayer
 	else:
 		explotar()
 
@@ -52,7 +53,8 @@ func _on_area_entered(_area):
 	explotar()
 
 func explotar():
-	col_bomb.disabled = true
+	# Usamos set_deferred para evitar errores de física al desactivar colisiones
+	col_bomb.set_deferred("disabled", true) 
 	if ani_bomb.animation != "explosion":
 		ani_bomb.play("explosion")
 		await ani_bomb.animation_finished
