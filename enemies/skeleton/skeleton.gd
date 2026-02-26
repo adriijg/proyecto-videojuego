@@ -9,10 +9,13 @@ var muerto = false
 
 @onready var ani = $Visual/ani_skeleton
 @onready var visual = $Visual
-
-# Referencias correctas a tus rayos dentro de Visual
 @onready var ray_r = $Visual/ray_right
 @onready var ray_l = $Visual/ray_left
+
+# CORRECCIÓN DE RUTA: 
+# Según tu imagen, AreaAtaqueEnemigo está dentro de AttackArea.
+@onready var area_golpe = $Visual/AttackArea/AreaAtaqueEnemigo
+@onready var col_golpe = $Visual/AttackArea/AreaAtaqueEnemigo/CollisionShape2D
 
 func _physics_process(delta):
 	if muerto: return 
@@ -22,13 +25,8 @@ func _physics_process(delta):
 
 	if player and not atacando:
 		var dir = sign(player.global_position.x - global_position.x)
-		
-		# Invertimos el scale.x para que el esqueleto mire al jugador
-		# y los rayos giren con él
 		visual.scale.x = dir
 		
-		# Usamos siempre el mismo porque al estar en el centro 
-		# y dentro de Visual, siempre apuntará hacia abajo del esqueleto.
 		if ray_r.is_colliding():
 			velocity.x = dir * speed
 			ani.play("walk")
@@ -36,17 +34,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			ani.play("idle")
 		
-		# LÓGICA DE SUELO:# Sustituye tu lógica de rayos por esta:
-		var rayo_activo
-		if dir > 0:
-			# Si voy a la derecha y el cuerpo mira a la derecha, 
-			# el que está delante es el que pusiste a la derecha (ray_r)
-			rayo_activo = ray_r 
-		else:
-			# Si voy a la izquierda y el cuerpo mira a la izquierda,
-			# por el efecto espejo, el que ahora está delante es el ray_r también
-			# (o el ray_l según cómo los posicionaste)
-			rayo_activo = ray_r
+		var rayo_activo = ray_r
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		if not atacando:
@@ -56,32 +44,25 @@ func _physics_process(delta):
 
 func recibir_danio(cantidad):
 	if muerto: return
-	
 	vida -= cantidad
-	print("Vida esqueleto: ", vida)
-	
 	if vida <= 0:
 		morir()
 	else:
-		# Al recibir un golpe, activamos 'atacando' para que no camine
-		# mientras hace la animación de dolor (hurt)
 		atacando = true
 		ani.play("hurt")
 
 func morir():
 	muerto = true
 	velocity = Vector2.ZERO
-	ani.play("death") # Usa 'death' de tu panel
-	# Desactivamos la colisión principal (la cápsula)
+	ani.play("death")
 	$col_skeleton_normal.set_deferred("disabled", true)
-	
 	await ani.animation_finished
 	queue_free()
 
-# --- SEÑALES (Conéctalas en el panel 'Nodo') ---
+# --- SEÑALES ---
 
 func _on_detection_area_body_entered(body):
-	if body.name == "samurai":
+	if body.is_in_group("samurai"):
 		player = body
 
 func _on_detection_area_body_exited(body):
@@ -89,12 +70,26 @@ func _on_detection_area_body_exited(body):
 		player = null
 
 func _on_attack_area_body_entered(body):
-	if body.name == "samurai" and not atacando and not muerto:
-		atacando = true
-		ani.play("attack_1") # Usa 'attack_1' de tu panel
+	# Esta señal debe venir del Area2D grande (AttackArea)
+	if body.is_in_group("samurai") and not atacando and not muerto:
+		iniciar_ataque_esqueleto()
+
+func iniciar_ataque_esqueleto():
+	print("1. Intento atacar") # Si esto sale, la señal de detección funciona.
+	atacando = true
+	ani.play("attack_1")
+	
+	await get_tree().create_timer(0.4).timeout 
+	
+	var cuerpos = area_golpe.get_overlapping_bodies()
+	print("2. Cuerpos detectados: ", cuerpos.size()) # Si sale 0, el problema es la MASK o MONITORING.
+	
+	for cuerpo in cuerpos:
+		print("3. He tocado a: ", cuerpo.name) # Si sale el nombre pero no quita vida, el problema es el GRUPO.
+		if cuerpo.is_in_group("samurai"):
+			cuerpo.recibir_danio(1)
 
 func _on_ani_skeleton_animation_finished():
-	# IMPORTANTE: Esta función debe "liberar" al esqueleto 
-	# tanto si termina de atacar como si termina de dolerse.
 	if ani.animation == "attack_1" or ani.animation == "hurt":
-		atacando = false # <--- Aquí es donde deja de estar "tonto"
+		atacando = false 
+		ani.play("idle")
