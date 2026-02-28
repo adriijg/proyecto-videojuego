@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dc8uelha2aorh"]
+
+[ext_resource type="Texture2D" uid="uid://b7fnvfmaa6hpf" path="res://collectionable/photo/img/photo.png" id="1_f8r2e"]
+[ext_resource type="Script" uid="uid://uic20tnykdlm" path="res://samurai/addons/hbox_contador.gd" id="1_nghah"]
+
+[node name="contador" type="Control" unique_id=959937665]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="hbox_contador" type="HBoxContainer" parent="." unique_id=806063188]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93100005
+anchor_top = 0.035
+anchor_right = 0.966
+anchor_bottom = 0.097
+offset_left = -69.512085
+offset_top = 11.32
+offset_right = -69.83203
+offset_bottom = 11.143997
+script = ExtResource("1_nghah")
+
+[node name="sprt_contador" type="Sprite2D" parent="hbox_contador" unique_id=1565250867]
+position = Vector2(-77, 52)
+scale = Vector2(0.20400001, 0.21199998)
+texture = ExtResource("1_f8r2e")
+
+[node name="lbl_contador" type="Label" parent="hbox_contador" unique_id=1872385598]
+layout_mode = 2
+text = "0/3"
+horizontal_alignment = 1

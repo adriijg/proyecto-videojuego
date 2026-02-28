@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dek7a3hi17x2y" path="res://enemies/flying_eye/img/DEATH.png" id="2_pl5gk"]
 [ext_resource type="Script" uid="uid://mpe2uhmqvtbk" path="res://enemies/flying_eye/flying_eye_sprt.gd" id="3_pl5gk"]
 [ext_resource type="PackedScene" uid="uid://dqy1dl48k3wqm" path="res://enemies/flying_eye/projectile/fly_eye_projectile_sprt.tscn" id="4_qhorh"]
+[ext_resource type="AudioStream" uid="uid://dhy65k3wn8pqr" path="res://enemies/flying_eye/Gruñido_terrorífico__#3-1772311331866.mp3" id="5_t7n6b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vqbug"]
 atlas = ExtResource("1_yflue")
@@ -199,8 +200,6 @@ position = Vector2(6, 28)
 
 [node name="area_flying_eye_project" parent="." unique_id=898105169 instance=ExtResource("4_qhorh")]
 position = Vector2(6, 29)
-collision_layer = 0
-collision_mask = 2
 
 [node name="area_deteccion" type="Area2D" parent="." unique_id=78157609]
 collision_mask = 2
@@ -208,3 +207,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_deteccion" unique_id=1747562075]
 position = Vector2(6, 3)
 shape = SubResource("CircleShape2D_qhorh")
+
+[node name="audio_flying_eye" type="AudioStreamPlayer2D" parent="." unique_id=684167650]
+stream = ExtResource("5_t7n6b")
+autoplay = true
+parameters/looping = true

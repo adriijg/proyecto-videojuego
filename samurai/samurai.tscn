@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dct6f67hb2m4r" path="res://samurai/img/DEATH.png" id="3_p0ogg"]
 [ext_resource type="PackedScene" uid="uid://kkhouw1q0hki" path="res://samurai/addons/life_bar.tscn" id="6_xgx4o"]
 [ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="8_jo6nw"]
+[ext_resource type="PackedScene" uid="uid://dc8uelha2aorh" path="res://samurai/addons/contador.tscn" id="9_1ad3a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p422s"]
 size = Vector2(12, 31.5)
@@ -464,6 +465,7 @@ limit_bottom = 630
 limit_smoothed = true
 
 [node name="hud" type="CanvasLayer" parent="." unique_id=847546967]
+visible = false
 
 [node name="life_bar" parent="hud" unique_id=21053273 instance=ExtResource("6_xgx4o")]
 offset_left = 131.0
@@ -474,5 +476,9 @@ scale = Vector2(2, 2)
 
 [node name="photoWin" parent="hud" unique_id=430329256 instance=ExtResource("8_jo6nw")]
 visible = false
+
+[node name="canvas_contador" type="CanvasLayer" parent="." unique_id=904038093]
+
+[node name="contador" parent="canvas_contador" unique_id=959937665 instance=ExtResource("9_1ad3a")]
 
 [connection signal="animation_finished" from="Visual/ani_samurai" to="." method="_on_ani_samurai_animation_finished"]

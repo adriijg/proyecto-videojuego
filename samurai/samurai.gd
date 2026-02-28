@@ -142,12 +142,3 @@ func update_col():
 	col_normal.disabled = false
 	if col_run: col_run.disabled = (ani_samurai.animation != "run")
 	if col_attack: col_attack.disabled = not atacando
-
-# Añade esta función al script del samurai
-func sumar_puntos(cantidad: int):
-	puntos_totales += cantidad
-	print("Puntos totales: ", puntos_totales)
-	
-	# Opcional: Actualizar UI del contador
-	if has_node("hud/contador_label"):
-		$hud/contador_label.text = "Puntos: " + str(puntos_totales)

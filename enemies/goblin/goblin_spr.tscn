@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dqaeyu1y81wl3" path="res://enemies/goblin/img/Attack3.png" id="1_nkkfm"]
 [ext_resource type="Script" uid="uid://c5g2iho50fd1x" path="res://enemies/goblin/goblin_spr.gd" id="1_t8wds"]
 [ext_resource type="PackedScene" uid="uid://csnr5n8vsuxqf" path="res://enemies/goblin/projectile/goblin_bomb.tscn" id="2_lcmo6"]
-[ext_resource type="Texture2D" uid="uid://bxxpr5jbe4q4c" path="res://enemies/goblin/img/DEATH.png" id="3_0swc1"]
-[ext_resource type="Script" uid="uid://ckdqd782fn6v3" path="res://enemies/goblin/area_muerte.gd" id="4_wltgf"]
+[ext_resource type="Texture2D" uid="uid://b7gnlp5xekm10" path="res://enemies/goblin/img/DEATH.png" id="3_0swc1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmvdy"]
 atlas = ExtResource("1_nkkfm")
@@ -218,8 +217,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wt1q5"]
 size = Vector2(17, 25)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcmo6"]
-size = Vector2(19, 27)
+[sub_resource type="CircleShape2D" id="CircleShape2D_0swc1"]
+radius = 115.20634
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wltgf"]
+size = Vector2(18, 27)
 
 [node name="static_goblin" type="StaticBody2D" unique_id=200800932]
 script = ExtResource("1_t8wds")
@@ -227,7 +229,7 @@ bomba_scene = ExtResource("2_lcmo6")
 
 [node name="ani_goblin" type="AnimatedSprite2D" parent="." unique_id=663835843]
 sprite_frames = SubResource("SpriteFrames_8dv5q")
-animation = &"death_soul"
+animation = &"attack"
 
 [node name="col_goblin" type="CollisionShape2D" parent="." unique_id=1016973611]
 position = Vector2(-4, 9)
@@ -242,9 +244,16 @@ position = Vector2(-2, 0)
 [node name="timer_goblin" type="Timer" parent="." unique_id=1515865991]
 autostart = true
 
-[node name="area_muerte" type="Area2D" parent="." unique_id=1466535444]
-script = ExtResource("4_wltgf")
+[node name="area_deteccion" type="Area2D" parent="." unique_id=1466535444]
+collision_mask = 2
 
-[node name="col_muerte" type="CollisionShape2D" parent="area_muerte" unique_id=1620984771]
+[node name="col_deteccion" type="CollisionShape2D" parent="area_deteccion" unique_id=1620984771]
 position = Vector2(-3.5, 9.5)
-shape = SubResource("RectangleShape2D_lcmo6")
+shape = SubResource("CircleShape2D_0swc1")
+
+[node name="area_daño" type="Area2D" parent="." unique_id=659663886]
+collision_layer = 8
+
+[node name="col_daño" type="CollisionShape2D" parent="area_daño" unique_id=682063105]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_wltgf")
