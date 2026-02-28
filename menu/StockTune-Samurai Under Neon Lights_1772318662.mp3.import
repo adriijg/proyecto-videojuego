@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db76qwfos55u8"
+path="res://.godot/imported/StockTune-Samurai Under Neon Lights_1772318662.mp3-1eeb7ebfe7bd7f942f846b9086c9ca98.mp3str"
+
+[deps]
+
+source_file="res://menu/StockTune-Samurai Under Neon Lights_1772318662.mp3"
+dest_files=["res://.godot/imported/StockTune-Samurai Under Neon Lights_1772318662.mp3-1eeb7ebfe7bd7f942f846b9086c9ca98.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

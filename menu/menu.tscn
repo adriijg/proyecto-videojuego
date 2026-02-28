@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cse16765kxje6" path="res://menu/menu.gd" id="1_g18jx"]
 [ext_resource type="Texture2D" uid="uid://crwnrhpfsugxn" path="res://menu/img/game_init.png" id="1_j0t7f"]
 [ext_resource type="FontFile" uid="uid://baxuh4pofjp68" path="res://menu/font/Midorima.ttf" id="3_6nwqt"]
+[ext_resource type="AudioStream" uid="uid://db76qwfos55u8" path="res://menu/StockTune-Samurai Under Neon Lights_1772318662.mp3" id="4_pbjm4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pbjm4"]
 font = ExtResource("3_6nwqt")
@@ -72,6 +73,11 @@ offset_right = 271.0
 offset_bottom = 645.0
 text = "by David Hoyas & Adrián Junquera"
 label_settings = SubResource("LabelSettings_6nwqt")
+
+[node name="audio_menu" type="AudioStreamPlayer2D" parent="." unique_id=1320412327]
+stream = ExtResource("4_pbjm4")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="vbox_menu/btn_start" to="." method="_on_btn_start_pressed"]
 [connection signal="pressed" from="vbox_menu/btn_exit" to="." method="_on_btn_end_pressed"]
