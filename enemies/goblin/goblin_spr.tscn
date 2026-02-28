@@ -229,7 +229,7 @@ bomba_scene = ExtResource("2_lcmo6")
 
 [node name="ani_goblin" type="AnimatedSprite2D" parent="." unique_id=663835843]
 sprite_frames = SubResource("SpriteFrames_8dv5q")
-animation = &"attack"
+animation = &"death_soul"
 
 [node name="col_goblin" type="CollisionShape2D" parent="." unique_id=1016973611]
 position = Vector2(-4, 9)
