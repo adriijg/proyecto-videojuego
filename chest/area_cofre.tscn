@@ -312,7 +312,13 @@ size = Vector2(27, 21)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0hyl"]
 size = Vector2(25, 19)
 
+[sub_resource type="LabelSettings" id="LabelSettings_h0hyl"]
+font_size = 8
+font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+outline_size = 4
+
 [node name="area_cofre" type="Area2D" unique_id=1010804529]
+position = Vector2(9, -5)
 collision_mask = 3
 script = ExtResource("1_h0hyl")
 
@@ -329,5 +335,14 @@ shape = SubResource("RectangleShape2D_y08wx")
 [node name="col_cofre_fisic" type="CollisionShape2D" parent="static_cofre" unique_id=723765128]
 position = Vector2(-8.5, 5.5)
 shape = SubResource("RectangleShape2D_h0hyl")
+
+[node name="lbl_mensaje" type="Label" parent="." unique_id=1018177735]
+visible = false
+offset_left = -51.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = -20.0
+text = "¡Necesitas las 3 fotos!"
+label_settings = SubResource("LabelSettings_h0hyl")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
