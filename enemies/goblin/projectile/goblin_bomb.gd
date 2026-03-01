@@ -18,13 +18,21 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	area_entered.connect(_on_area_entered)
+	
+	# ✅ NUEVA CONEXIÓN: Detectar cambio de frame
+	ani_bomb.frame_changed.connect(_on_frame_changed)
+	
 	samurai = get_tree().get_first_node_in_group("samurai")
 	z_index = 10
 	
-	# 🆕 FORZAR RayCast CADA FRAME
 	if ray_suelo:
 		ray_suelo.enabled = true
 		ray_suelo.exclude_parent = true
+
+func _on_frame_changed():
+	if ani_bomb.animation == "explosion" and ani_bomb.frame == 10:
+		col_bomb.scale = Vector2(3.0, 3.0) # Duplica el tamaño (ajusta el 2.0 si quieres más)
+		print("💥 Escala duplicada en frame 10")
 
 func iniciar(dir: Vector2):
 	vel_x = dir.x * velocidad_horizontal
@@ -52,11 +60,6 @@ func _physics_process(delta):
 	tiempo_vida -= delta
 	if tiempo_vida <= 0:
 		explotar()
-		
-func _on_frame_changed():
-	if ani_bomb.animation == "explosion" and ani_bomb.frame == 10:
-		col_bomb.scale = Vector2(2.0, 2.0) # Duplica el tamaño (ajusta el 2.0 si quieres más)
-		print("💥 Escala duplicada en frame 10")
 
 # 🆕 DAÑO INICIAL + CONTINUO
 func _on_body_entered(body):

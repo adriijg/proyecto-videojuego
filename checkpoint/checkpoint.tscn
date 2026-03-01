@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://odnx4dtsllca"]
+
+[ext_resource type="Script" uid="uid://dmdvu55dnq5tx" path="res://checkpoint/checkpoint.gd" id="1_q42b1"]
+[ext_resource type="Texture2D" uid="uid://ogt2c27yj4k6" path="res://checkpoint/img/katana_checkpoint.png" id="1_slojq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slojq"]
+size = Vector2(10, 33)
+
+[node name="Checkpoint" type="Area2D" unique_id=1230657391]
+collision_mask = 2
+script = ExtResource("1_q42b1")
+
+[node name="KatanaCheckpoint" type="Sprite2D" parent="." unique_id=223058213]
+position = Vector2(10, -17)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_slojq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=233021910]
+position = Vector2(4, -16.5)
+shape = SubResource("RectangleShape2D_slojq")
