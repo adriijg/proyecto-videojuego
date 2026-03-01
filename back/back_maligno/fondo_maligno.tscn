@@ -16,6 +16,7 @@ motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(426, 0)
 
 [node name="sprite1" type="Sprite2D" parent="layer1" unique_id=703434311]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_tgt8k")
 centered = false
 
@@ -24,6 +25,7 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(426, 0)
 
 [node name="sprite2" type="Sprite2D" parent="layer2" unique_id=1697385513]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_hsuwu")
 centered = false
 
@@ -32,6 +34,7 @@ motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(426, 0)
 
 [node name="sprite3" type="Sprite2D" parent="layer3" unique_id=1192333225]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_5wsi0")
 centered = false
 
@@ -40,6 +43,7 @@ motion_scale = Vector2(0.4, 0.4)
 motion_mirroring = Vector2(426, 0)
 
 [node name="sprite4" type="Sprite2D" parent="layer4" unique_id=248300996]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_ib32s")
 centered = false
 
@@ -48,6 +52,7 @@ motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(426, 0)
 
 [node name="sprite5" type="Sprite2D" parent="layer5" unique_id=854889592]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_v8nmk")
 centered = false
 
@@ -56,5 +61,6 @@ motion_scale = Vector2(0.6, 0.6)
 motion_mirroring = Vector2(426, 0)
 
 [node name="sprite6" type="Sprite2D" parent="layer6" unique_id=296625944]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_myw2o")
 centered = false

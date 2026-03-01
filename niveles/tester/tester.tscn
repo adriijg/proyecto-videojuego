@@ -1,18 +1,19 @@
 [gd_scene format=4 uid="uid://dlvptpgk6qcbg"]
 
-[ext_resource type="Texture2D" uid="uid://dcaaaoq4ffhb1" path="res://Recursos/Dungeon Tile Set.png" id="1_gd57x"]
-[ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="2_28v5d"]
-[ext_resource type="PackedScene" uid="uid://b8wgwvf85m3e6" path="res://enemies/skeleton/skeleton.tscn" id="3_jucg2"]
-[ext_resource type="PackedScene" uid="uid://c5tkpopusbv67" path="res://back/back_maligno/fondo_maligno.tscn" id="4_goog7"]
-[ext_resource type="PackedScene" uid="uid://boaah2svt6wip" path="res://enemies/spikes/4_spikes.tscn" id="5_h4mqk"]
-[ext_resource type="PackedScene" uid="uid://ds4e888a07qih" path="res://enemies/spikes/spike.tscn" id="6_oru8t"]
-[ext_resource type="PackedScene" uid="uid://2ng3c6v14q57" path="res://enemies/goblin/goblin_spr.tscn" id="7_a8ro1"]
-[ext_resource type="PackedScene" uid="uid://vwajvj1fslel" path="res://collectionable/bottle/life_flask.tscn" id="8_b0re2"]
-[ext_resource type="PackedScene" uid="uid://6mf1xu7p820m" path="res://enemies/flying_eye/flying_eye_sprt.tscn" id="9_28v5d"]
-[ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="10_jucg2"]
+[ext_resource type="Texture2D" uid="uid://dcaaaoq4ffhb1" path="res://Recursos/Dungeon Tile Set.png" id="1_01ek5"]
+[ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="2_sgayy"]
+[ext_resource type="PackedScene" uid="uid://b8wgwvf85m3e6" path="res://enemies/skeleton/skeleton.tscn" id="3_vydso"]
+[ext_resource type="PackedScene" uid="uid://c5tkpopusbv67" path="res://back/back_maligno/fondo_maligno.tscn" id="4_x7p5f"]
+[ext_resource type="PackedScene" uid="uid://boaah2svt6wip" path="res://enemies/spikes/4_spikes.tscn" id="5_28b72"]
+[ext_resource type="PackedScene" uid="uid://ds4e888a07qih" path="res://enemies/spikes/spike.tscn" id="6_gi5rp"]
+[ext_resource type="PackedScene" uid="uid://2ng3c6v14q57" path="res://enemies/goblin/goblin_spr.tscn" id="7_gfplg"]
+[ext_resource type="PackedScene" uid="uid://vwajvj1fslel" path="res://collectionable/bottle/life_flask.tscn" id="8_8owuf"]
+[ext_resource type="PackedScene" uid="uid://6mf1xu7p820m" path="res://enemies/flying_eye/flying_eye_sprt.tscn" id="9_dbdej"]
+[ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="10_t11i5"]
+[ext_resource type="PackedScene" uid="uid://dnyehjdym8spf" path="res://chest/area_cofre.tscn" id="11_sgayy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mk2d0"]
-texture = ExtResource("1_gd57x")
+texture = ExtResource("1_01ek5")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
@@ -176,38 +177,47 @@ position = Vector2(-3, 399)
 tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAABAP//AAACAAEAAAACAP//AAADAAEAAAADAP//AAABAAEAAAAEAP//AAACAAEAAAAFAP//AAADAAEAAAAGAP//AAABAAEAAAAHAP//AAACAAEAAAAIAP//AAADAAEAAAAJAP//AAABAAEAAAAKAP//AAACAAEAAAALAP//AAADAAEAAAAMAP//AAABAAEAAAANAP//AAACAAEAAAAOAP//AAADAAEAAAAPAP//AAABAAEAAAAQAP//AAACAAEAAAARAP//AAADAAEAAAASAP//AAABAAEAAAATAP//AAACAAEAAAAVAP//AAABAAEAAAAWAP//AAACAAEAAAAXAP//AAADAAEAAAAYAP//AAABAAEAAAAZAP//AAACAAEAAAAaAP//AAADAAEAAAAAAPz/AAADAAEAAAAAAP3/AAADAAIAAAAAAP7/AAADAAMAAAAAAPn/AAADAAEAAAAAAPr/AAADAAIAAAAAAPv/AAADAAMAAAAAAPb/AAADAAEAAAAAAPf/AAADAAIAAAAAAPj/AAADAAMAAAAbAP//AAABAAEAAAAcAP//AAACAAEAAAAdAP//AAADAAEAAAAeAP//AAABAAEAAAAgAP//AAADAAEAAAAhAP//AAABAAEAAAAiAP//AAACAAEAAAAjAP//AAADAAEAAAAkAP//AAABAAEAAAAlAP//AAACAAEAAAAmAP//AAADAAEAAAAnAP//AAABAAEAAAAoAP//AAACAAEAAAApAP//AAADAAEAAAAqAP//AAABAAEAAAArAP//AAACAAEAAAAsAP//AAADAAEAAAAtAP//AAABAAEAAAAuAP//AAACAAEAAAAvAP//AAADAAEAAAAwAP//AAABAAEAAAAxAP//AAACAAEAAAAyAP//AAADAAEAAAAzAP//AAABAAEAAAA0AP//AAACAAEAAAA1AP//AAADAAEAAAA2AP//AAABAAEAAAA3AP//AAACAAEAAAA4AP//AAADAAEAAAA5AP//AAABAAEAAAA6AP//AAACAAEAAAA7AP//AAADAAEAAAA8AP//AAABAAEAAAA9AP//AAACAAEAAAA+AP//AAADAAEAAAA/AP//AAABAAEAAABAAP//AAACAAEAAABBAP//AAADAAEAAABCAP//AAABAAEAAABDAP//AAACAAEAAABEAP//AAADAAEAAABFAP//AAABAAEAAABGAP//AAACAAEAAABHAP//AAADAAEAAABIAP//AAABAAEAAABJAP//AAACAAEAAABKAP//AAADAAEAAABLAP//AAABAAEAAABMAP//AAACAAEAAABNAP//AAADAAEAAABOAP//AAABAAEAAABPAP//AAACAAEAAABQAP//AAADAAEAAABRAP//AAABAAEAAABSAP//AAACAAEAAABTAP//AAADAAEAAABUAP//AAABAAEAAABVAP//AAACAAEAAABWAP//AAADAAEAAABXAP//AAABAAEAAABYAP//AAACAAEAAABZAP//AAADAAEAAABaAP//AAABAAEAAABbAP//AAACAAEAAABcAP//AAADAAEAAABdAP//AAABAAEAAABeAP//AAACAAEAAABfAP//AAADAAEAAABgAP//AAABAAEAAABhAP//AAACAAEAAABiAP//AAADAAEAAABjAP//AAABAAEAAABkAP//AAACAAEAAABlAP//AAADAAEAAAAAAPP/AAADAAEAAAAAAPT/AAADAAIAAAAAAPX/AAADAAMAAAAAAPD/AAADAAEAAAAAAPH/AAADAAIAAAAAAPL/AAADAAMAAAAAAO3/AAADAAEAAAAAAO7/AAADAAIAAAAAAO//AAADAAMAAAAAAOr/AAADAAEAAAAAAOv/AAADAAIAAAAAAOz/AAADAAMAAAAAAOf/AAADAAEAAAAAAOj/AAADAAIAAAAAAOn/AAADAAMAAAAAAOT/AAADAAEAAAAAAOX/AAADAAIAAAAAAOb/AAADAAMAAAAAAOH/AAADAAEAAAAAAOL/AAADAAIAAAAAAOP/AAADAAMAAAAAAN7/AAADAAEAAAAAAN//AAADAAIAAAAAAOD/AAADAAMAAAARAPz/AAADAAEAAAARAP3/AAADAAIAAAARAP7/AAADAAMAAAAiAPz/AAADAAEAAAAiAP3/AAADAAIAAAAiAP7/AAADAAMAAAA=")
 tile_set = SubResource("TileSet_tiaa6")
 
-[node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_28v5d")]
+[node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_sgayy")]
 position = Vector2(86, -20)
 
-[node name="skeleton" parent="." unique_id=1015477422 instance=ExtResource("3_jucg2")]
+[node name="skeleton" parent="." unique_id=1015477422 instance=ExtResource("3_vydso")]
 position = Vector2(413, -49)
 
-[node name="fondo_maligno" parent="." unique_id=1422233237 instance=ExtResource("4_goog7")]
+[node name="fondo_maligno" parent="." unique_id=1422233237 instance=ExtResource("4_x7p5f")]
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
-[node name="4spikes" parent="." unique_id=151842057 instance=ExtResource("5_h4mqk")]
+[node name="4spikes" parent="." unique_id=151842057 instance=ExtResource("5_28b72")]
 position = Vector2(231, -25)
 
-[node name="bottom" parent="." unique_id=102084536 instance=ExtResource("5_h4mqk")]
+[node name="bottom" parent="." unique_id=102084536 instance=ExtResource("5_28b72")]
 visible = false
 position = Vector2(427.99997, 297)
 scale = Vector2(2.5, 2.5)
 
-[node name="spike" parent="." unique_id=1818921599 instance=ExtResource("6_oru8t")]
+[node name="spike" parent="." unique_id=1818921599 instance=ExtResource("6_gi5rp")]
 position = Vector2(34, -25)
 
-[node name="static_goblin" parent="." unique_id=200800932 instance=ExtResource("7_a8ro1")]
+[node name="static_goblin" parent="." unique_id=200800932 instance=ExtResource("7_gfplg")]
 position = Vector2(709, -44)
 
-[node name="life_flask" parent="." unique_id=625741569 instance=ExtResource("8_b0re2")]
+[node name="life_flask" parent="." unique_id=625741569 instance=ExtResource("8_8owuf")]
 position = Vector2(527, -32)
 
-[node name="life_flask2" parent="." unique_id=683121358 instance=ExtResource("8_b0re2")]
+[node name="life_flask2" parent="." unique_id=683121358 instance=ExtResource("8_8owuf")]
 position = Vector2(927, -31)
 
-[node name="area_flying_eye" parent="." unique_id=1913054269 instance=ExtResource("9_28v5d")]
+[node name="area_flying_eye" parent="." unique_id=1913054269 instance=ExtResource("9_dbdej")]
 position = Vector2(1054, -86)
 
-[node name="photoWin" parent="." unique_id=430329256 instance=ExtResource("10_jucg2")]
+[node name="photoWin" parent="." unique_id=430329256 instance=ExtResource("10_t11i5")]
 position = Vector2(279, -92)
+
+[node name="photoWin2" parent="." unique_id=1075050711 instance=ExtResource("10_t11i5")]
+position = Vector2(1250, -39)
+
+[node name="photoWin3" parent="." unique_id=1177292571 instance=ExtResource("10_t11i5")]
+position = Vector2(597, -38)
+
+[node name="area_cofre" parent="." unique_id=1010804529 instance=ExtResource("11_sgayy")]
+position = Vector2(1588, -33)

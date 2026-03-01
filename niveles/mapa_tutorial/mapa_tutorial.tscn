@@ -1233,10 +1233,10 @@ vertical_alignment = 1
 
 [node name="info3" type="Label" parent="label" unique_id=1523901040]
 layout_mode = 0
-offset_left = 2889.0
-offset_top = 11.0
-offset_right = 3109.0
-offset_bottom = 28.0
+offset_left = 2893.0
+offset_top = -5.0
+offset_right = 3113.0
+offset_bottom = 12.0
 text = "Cuidado! No te quedes debajo del ojo."
 label_settings = SubResource("LabelSettings_44w5s")
 
@@ -1250,12 +1250,6 @@ text = "Recoge los fragmentos de foto."
 label_settings = SubResource("LabelSettings_r0f47")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="label" unique_id=1639655795]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Con"
 
 [node name="enemies" type="Node2D" parent="." unique_id=697691827]
 
@@ -1291,7 +1285,7 @@ position = Vector2(5194, 506)
 position = Vector2(5356, 436.00003)
 
 [node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_t7auw")]
-position = Vector2(3512.0002, 334)
+position = Vector2(203, 275)
 
 [node name="checkpoint" type="Node2D" parent="." unique_id=906757233]
 
