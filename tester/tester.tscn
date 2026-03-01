@@ -210,4 +210,4 @@ position = Vector2(927, -31)
 position = Vector2(1054, -86)
 
 [node name="photoWin" parent="." unique_id=430329256 instance=ExtResource("10_jucg2")]
-position = Vector2(389, 54)
+position = Vector2(279, -92)

@@ -7,16 +7,16 @@
 size = Vector2(22, 29)
 
 [node name="photoWin" type="Area2D" unique_id=430329256]
-position = Vector2(110.11282, 153.92267)
+scale = Vector2(0.75, 0.75)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_h5di5")
 
 [node name="sprt_photo" type="Sprite2D" parent="." unique_id=1068857979]
-position = Vector2(-108.112816, -145.92267)
+position = Vector2(1.3333397, -0.6666692)
 scale = Vector2(0.08000002, 0.08799999)
 texture = ExtResource("1_qdhn2")
 
 [node name="col_photo" type="CollisionShape2D" parent="." unique_id=2100968291]
-position = Vector2(-109.11282, -145.42267)
+position = Vector2(0.33333206, -0.1666692)
 shape = SubResource("RectangleShape2D_qdhn2")

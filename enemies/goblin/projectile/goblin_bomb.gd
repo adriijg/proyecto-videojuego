@@ -52,6 +52,11 @@ func _physics_process(delta):
 	tiempo_vida -= delta
 	if tiempo_vida <= 0:
 		explotar()
+		
+func _on_frame_changed():
+	if ani_bomb.animation == "explosion" and ani_bomb.frame == 10:
+		col_bomb.scale = Vector2(2.0, 2.0) # Duplica el tamaño (ajusta el 2.0 si quieres más)
+		print("💥 Escala duplicada en frame 10")
 
 # 🆕 DAÑO INICIAL + CONTINUO
 func _on_body_entered(body):

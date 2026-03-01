@@ -153,7 +153,7 @@ collision_mask = 2
 script = ExtResource("1_khf5j")
 
 [node name="ani_bomb" type="AnimatedSprite2D" parent="." unique_id=2085563443]
-position = Vector2(-2, -4)
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_mm2x8")
 animation = &"explosion"
 
