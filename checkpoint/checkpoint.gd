@@ -1,7 +1,7 @@
 extends Area2D
 
 var activado: bool = false
-@onready var ani_sprite = $ani_bomb # O el nodo que tenga tu katana
+@onready var ani_sprite = $KatanaCheckpoint # O el nodo que tenga tu katana
 
 func _ready():
 	body_entered.connect(_on_body_entered)

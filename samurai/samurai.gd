@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed = 250
 @export var gravity_scale = 2.0 
 @export var jump_force = -600
-@export var vida_max = 5 # Ahora configurado a 5
+@export var vida_max = 5 
 
 @onready var visual = $Visual
 @onready var ani_samurai = $Visual/ani_samurai
@@ -11,8 +11,8 @@ extends CharacterBody2D
 @onready var col_run = $Visual/col_samurai_run
 @onready var col_attack = $Visual/AreaAtaque/col_samurai_attack
 @onready var area_ataque = $Visual/AreaAtaque
-@onready var particles = $Visual/muerte_particulas # Ruta corregida según tu estructura
-@onready var health_bar = $hud/life_bar/life_sprt # Apunta al AnimatedSprite2D hijo
+@onready var particles = $Visual/muerte_particulas 
+@onready var health_bar = $hud/life_bar/life_sprt 
 
 var atacando = false
 var cam_samurai 
@@ -21,14 +21,25 @@ var esta_muerto = false
 var puntos_totales: int = 0
 
 func _ready():
+	# Conexiones existentes
 	if not ani_samurai.animation_finished.is_connected(_on_animation_finished):
 		ani_samurai.animation_finished.connect(_on_animation_finished)
 	add_to_group("samurai")
 	cam_samurai = $cam_samurai
 	
-	# Inicializamos la barra al empezar
+	# ✅ LÓGICA DE APARICIÓN SEGURA
+	# Verificamos si Global existe y si el checkpoint NO es cero
+	if Global.ultimo_checkpoint != Vector2.ZERO:
+		# Si hay checkpoint, teletransportar a la katana
+		global_position = Global.ultimo_checkpoint
+		print("Apareciendo en Checkpoint: ", Global.ultimo_checkpoint)
+	else:
+		# Si NO hay checkpoint (inicio del juego), no tocamos la posición.
+		# El samurai se quedará donde lo hayas dibujado tú en el editor de niveles.
+		print("No hay checkpoint. Apareciendo en posición inicial del editor.")
+	
 	if health_bar:
-		health_bar.frame = 0 
+		health_bar.frame = 0
 
 func _physics_process(delta: float) -> void:
 	if esta_muerto: return
@@ -40,6 +51,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_force
 
 	var input_axis = Input.get_axis("mover_izquierda", "mover_derecha")
+	
+	# Dentro de func _physics_process(delta):
+	if global_position.y > 700: # Ajusta el 1000 según la profundidad de tu mapa
+		morir()
 	
 	if atacando:
 		velocity.x = move_toward(velocity.x, 0, speed)
@@ -70,58 +85,41 @@ func iniciar_ataque():
 	col_attack.disabled = false 
 	await get_tree().create_timer(0.1).timeout
 	
-	# DETECTAR CUERPOS (Para Esqueletos, Goblins, etc)
 	var cuerpos = area_ataque.get_overlapping_bodies()
 	for cuerpo in cuerpos:
 		if cuerpo.has_method("recibir_danio") and cuerpo != self:
 			cuerpo.recibir_danio(1)
 			
-	# NUEVO: DETECTAR ÁREAS (Para el Ojo Volador y otros proyectiles)
 	var areas = area_ataque.get_overlapping_areas()
 	for area in areas:
 		if area.has_method("recibir_danio"):
-			area.recibir_danio() # El ojo muere de 1 golpe
+			area.recibir_danio()
 
 func curar(cantidad):
 	if esta_muerto: return
-	
-	# Sumamos la vida sin pasar del máximo
 	vida_actual += cantidad
 	if vida_actual > vida_max:
 		vida_actual = vida_max
 	
-	# Actualizamos la barra de vida (frames)
-	# Si Vida 5 -> Frame 0, entonces: 5 - 5 = 0
 	if health_bar:
 		var nuevo_frame = vida_max - vida_actual
 		health_bar.frame = clamp(nuevo_frame, 0, 5)
 	
-	# Feedback visual: Parpadeo Verde (Curación)
 	ani_samurai.modulate = Color.GREEN
 	await get_tree().create_timer(0.1).timeout
 	ani_samurai.modulate = Color.WHITE
-	print("Samurai curado. Vida actual: ", vida_actual)
 	
 func recibir_danio(cantidad):
 	if esta_muerto: return
-	
 	vida_actual -= cantidad
 	
-	# Sincronización exacta:
-	# Vida 5 -> Frame 0 (Lleno)
-	# Vida 4 -> Frame 1
-	# Vida 3 -> Frame 2
-	# Vida 2 -> Frame 3
-	# Vida 1 -> Frame 4
-	# Vida 0 -> Frame 5 (Vacío)
 	if health_bar:
 		var nuevo_frame = vida_max - vida_actual
-		health_bar.frame = clamp(nuevo_frame, 0, 5) # clamp asegura que no se pase del límite
+		health_bar.frame = clamp(nuevo_frame, 0, 5) 
 	
 	if vida_actual <= 0:
 		morir()
 	else:
-		# Feedback visual de golpe (Parpadeo rojo)
 		ani_samurai.modulate = Color.RED
 		await get_tree().create_timer(0.1).timeout
 		ani_samurai.modulate = Color.WHITE
@@ -131,12 +129,14 @@ func morir():
 	esta_muerto = true 
 	
 	if particles:
-		particles.emitting = true # Activa tus ajustes del inspector
+		particles.emitting = true 
 
 	ani_samurai.visible = false
 	col_normal.set_deferred("disabled", true) 
 	set_physics_process(false)
 
+	# ✅ MODIFICADO: Esperar y recargar la escena
+	# Al recargar, el _ready() se ejecutará y nos moverá a Global.ultimo_checkpoint
 	await get_tree().create_timer(1.5).timeout
 	get_tree().reload_current_scene()
 

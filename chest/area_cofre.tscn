@@ -313,6 +313,7 @@ size = Vector2(27, 21)
 size = Vector2(25, 19)
 
 [node name="area_cofre" type="Area2D" unique_id=1010804529]
+collision_mask = 3
 script = ExtResource("1_h0hyl")
 
 [node name="sprt_cofre" type="AnimatedSprite2D" parent="." unique_id=900331009]
