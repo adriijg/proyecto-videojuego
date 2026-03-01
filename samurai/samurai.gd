@@ -7,6 +7,8 @@ extends CharacterBody2D
 
 @onready var visual = $Visual
 @onready var ani_samurai = $Visual/ani_samurai
+@onready var snd_ataque = $snd_ataque
+@onready var snd_muerte = $snd_muerte
 @onready var col_normal = $col_samurai_normal
 @onready var col_run = $Visual/col_samurai_run
 @onready var col_attack = $Visual/AreaAtaque/col_samurai_attack
@@ -81,6 +83,7 @@ func update_animation(input_axis):
 func iniciar_ataque():
 	if atacando: return
 	atacando = true
+	
 	ani_samurai.play("attack")
 	col_attack.disabled = false 
 	await get_tree().create_timer(0.1).timeout
@@ -94,6 +97,12 @@ func iniciar_ataque():
 	for area in areas:
 		if area.has_method("recibir_danio"):
 			area.recibir_danio()
+	
+		# 🔊 REPRODUCIR SONIDO
+	if snd_ataque:
+		snd_ataque.play()
+		await get_tree().create_timer(1.0).timeout
+		snd_ataque.stop()
 
 func curar(cantidad):
 	if esta_muerto: return
@@ -134,6 +143,11 @@ func morir():
 	ani_samurai.visible = false
 	col_normal.set_deferred("disabled", true) 
 	set_physics_process(false)
+	
+	if snd_muerte:
+		snd_muerte.play()
+		await get_tree().create_timer(1.0).timeout
+		snd_muerte.stop()
 
 	# ✅ MODIFICADO: Esperar y recargar la escena
 	# Al recargar, el _ready() se ejecutará y nos moverá a Global.ultimo_checkpoint

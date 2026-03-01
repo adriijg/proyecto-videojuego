@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://kkhouw1q0hki" path="res://samurai/addons/life_bar.tscn" id="6_xgx4o"]
 [ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="8_jo6nw"]
 [ext_resource type="PackedScene" uid="uid://dc8uelha2aorh" path="res://samurai/addons/contador.tscn" id="9_1ad3a"]
+[ext_resource type="AudioStream" uid="uid://c551gw80mgxus" path="res://samurai/addons/sword_sound.wav" id="10_32hlx"]
+[ext_resource type="AudioStream" uid="uid://dh55qylfkefty" path="res://samurai/addons/death_sound.wav" id="10_b44ii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p422s"]
 size = Vector2(12, 31.5)
@@ -482,5 +484,11 @@ offset_bottom = -12.0
 
 [node name="photoWin" parent="hud" unique_id=430329256 instance=ExtResource("8_jo6nw")]
 visible = false
+
+[node name="snd_muerte" type="AudioStreamPlayer2D" parent="." unique_id=990096423]
+stream = ExtResource("10_b44ii")
+
+[node name="snd_ataque" type="AudioStreamPlayer2D" parent="." unique_id=825361968]
+stream = ExtResource("10_32hlx")
 
 [connection signal="animation_finished" from="Visual/ani_samurai" to="." method="_on_ani_samurai_animation_finished"]

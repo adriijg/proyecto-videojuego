@@ -13,6 +13,7 @@ font_size = 65
 font_size = 10
 
 [node name="Menu" type="Control" unique_id=807929592]
+modulate = Color(0.7202103, 0.7202103, 0.7202103, 1)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
