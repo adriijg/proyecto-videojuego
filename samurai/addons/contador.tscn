@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b7fnvfmaa6hpf" path="res://collectionable/photo/img/photo.png" id="1_f8r2e"]
 [ext_resource type="Script" uid="uid://uic20tnykdlm" path="res://samurai/addons/hbox_contador.gd" id="1_nghah"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_nghah"]
+font_size = 24
+
 [node name="contador" type="Control" unique_id=959937665]
 layout_mode = 3
 anchors_preset = 15
@@ -25,11 +28,12 @@ offset_bottom = 11.143997
 script = ExtResource("1_nghah")
 
 [node name="sprt_contador" type="Sprite2D" parent="hbox_contador" unique_id=1565250867]
-position = Vector2(-77, 52)
-scale = Vector2(0.20400001, 0.21199998)
+position = Vector2(-35.999985, 21)
+scale = Vector2(0.13600007, 0.14133339)
 texture = ExtResource("1_f8r2e")
 
 [node name="lbl_contador" type="Label" parent="hbox_contador" unique_id=1872385598]
 layout_mode = 2
 text = "0/3"
+label_settings = SubResource("LabelSettings_nghah")
 horizontal_alignment = 1

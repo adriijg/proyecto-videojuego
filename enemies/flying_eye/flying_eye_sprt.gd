@@ -23,11 +23,9 @@ func _ready():
 
 	ani_flying_eye.play("attack")
 
-	# Conexión para morir (detecta el área de ataque del jugador)
-	if area_muerte:
-		area_muerte.area_entered.connect(_on_area_muerte_entered)
+	# CONEXIÓN CORREGIDA: Nos conectamos a nosotros mismos (el Area2D raíz)
+	self.area_entered.connect(_on_area_muerte_entered)
 	
-	# NUEVO: Conexiones para el área de detección
 	if has_node("area_deteccion"):
 		$area_deteccion.body_entered.connect(_on_detection_body_entered)
 		$area_deteccion.body_exited.connect(_on_detection_body_exited)
@@ -57,22 +55,33 @@ func _on_detection_body_exited(body):
 # --- DAÑO Y MUERTE ---
 func _on_area_muerte_entered(area):
 	if area.name == "AreaAtaque" or area.is_in_group("ataque_jugador"):
+		print("¡Ojo golpeado!")
 		recibir_danio()
 
 func recibir_danio():
+	# Evitamos que procese más daño si ya está muriendo
+	if vida <= 0: return 
+	vida = 0
+	print("¡Ojo eliminado!")
 	morir()
 
 func morir():
+	# 1. Paramos todo el procesamiento inmediatamente
+	set_physics_process(false)
 	timer_flying_eye.stop()
-	# Desactivamos colisiones usando set_deferred para evitar errores de física
+	
+	# 2. Desactivamos las áreas para que no den más mensajes
 	col_flying_eye.set_deferred("disabled", true)
 	if has_node("area_deteccion"):
 		$area_deteccion.set_deferred("monitoring", false)
+		$area_deteccion.set_deferred("monitorable", false)
 
+	# 3. Animación y eliminación
 	if ani_flying_eye.sprite_frames.has_animation("death"):
 		ani_flying_eye.play("death")
 		await ani_flying_eye.animation_finished
-
+	
+	# 4. Desaparecer del todo
 	queue_free()
 
 func _lanzar_proyectil():

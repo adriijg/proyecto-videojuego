@@ -70,10 +70,17 @@ func iniciar_ataque():
 	col_attack.disabled = false 
 	await get_tree().create_timer(0.1).timeout
 	
+	# DETECTAR CUERPOS (Para Esqueletos, Goblins, etc)
 	var cuerpos = area_ataque.get_overlapping_bodies()
 	for cuerpo in cuerpos:
 		if cuerpo.has_method("recibir_danio") and cuerpo != self:
 			cuerpo.recibir_danio(1)
+			
+	# NUEVO: DETECTAR ÁREAS (Para el Ojo Volador y otros proyectiles)
+	var areas = area_ataque.get_overlapping_areas()
+	for area in areas:
+		if area.has_method("recibir_danio"):
+			area.recibir_danio() # El ojo muere de 1 golpe
 
 func curar(cantidad):
 	if esta_muerto: return

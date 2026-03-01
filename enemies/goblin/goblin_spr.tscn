@@ -218,7 +218,7 @@ animations = [{
 size = Vector2(17, 25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0swc1"]
-radius = 115.20634
+radius = 197.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wltgf"]
 size = Vector2(18, 27)
@@ -248,7 +248,7 @@ autostart = true
 collision_mask = 2
 
 [node name="col_deteccion" type="CollisionShape2D" parent="area_deteccion" unique_id=1620984771]
-position = Vector2(-3.5, 9.5)
+position = Vector2(0, 10)
 shape = SubResource("CircleShape2D_0swc1")
 
 [node name="area_daño" type="Area2D" parent="." unique_id=659663886]

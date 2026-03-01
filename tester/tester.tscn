@@ -177,7 +177,7 @@ tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAABAP//AAACAAEAAAACAP//AAADAAE
 tile_set = SubResource("TileSet_tiaa6")
 
 [node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_28v5d")]
-position = Vector2(110, -101)
+position = Vector2(86, -20)
 
 [node name="skeleton" parent="." unique_id=1015477422 instance=ExtResource("3_jucg2")]
 position = Vector2(413, -49)
@@ -188,6 +188,11 @@ transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="4spikes" parent="." unique_id=151842057 instance=ExtResource("5_h4mqk")]
 position = Vector2(231, -25)
+
+[node name="bottom" parent="." unique_id=102084536 instance=ExtResource("5_h4mqk")]
+visible = false
+position = Vector2(427.99997, 297)
+scale = Vector2(2.5, 2.5)
 
 [node name="spike" parent="." unique_id=1818921599 instance=ExtResource("6_oru8t")]
 position = Vector2(34, -25)

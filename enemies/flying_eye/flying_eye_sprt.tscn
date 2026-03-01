@@ -168,9 +168,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4wp62")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
-"speed": 5.0
+"speed": 16.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sla58"]
@@ -180,14 +180,16 @@ radius = 9.0
 radius = 158.02847
 
 [node name="area_flying_eye" type="Area2D" unique_id=1913054269]
+collision_layer = 5
 collision_mask = 2
 script = ExtResource("3_pl5gk")
 proyectil_scene = ExtResource("4_qhorh")
 
 [node name="ani_flying_eye" type="AnimatedSprite2D" parent="." unique_id=1765474251]
 sprite_frames = SubResource("SpriteFrames_l36h5")
-animation = &"attack"
-frame_progress = 0.18032531
+animation = &"death"
+frame = 15
+frame_progress = 1.0
 
 [node name="col_flying_eye" type="CollisionShape2D" parent="." unique_id=1912653813]
 position = Vector2(6, 3)
