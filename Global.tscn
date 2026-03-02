@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b0bodkjjoft3n"]
+[gd_scene format=3 uid="uid://bo0ut3e0aw2n7"]
 
 [ext_resource type="Script" uid="uid://dignkkfhwka7u" path="res://Global.gd" id="1_4mbhf"]
 [ext_resource type="AudioStream" uid="uid://c5voiq1cjr032" path="res://global_assets/enemy_death.wav" id="2_hnvys"]
