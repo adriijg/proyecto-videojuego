@@ -2,19 +2,71 @@
 
 [ext_resource type="PackedScene" uid="uid://dalwacahaetna" path="res://niveles/nivel1/nivel_facil.tscn" id="1_8a1ph"]
 [ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="2_wjl7u"]
-[ext_resource type="PackedScene" uid="uid://c5ih706qf1tls" path="res://back/background/fondo.tscn" id="3_wjl7u"]
+[ext_resource type="PackedScene" uid="uid://c5tkpopusbv67" path="res://back/back_maligno/fondo_maligno.tscn" id="4_6dawc"]
 [ext_resource type="PackedScene" uid="uid://dnyehjdym8spf" path="res://chest/area_cofre.tscn" id="4_7uceq"]
+[ext_resource type="PackedScene" uid="uid://b8wgwvf85m3e6" path="res://enemies/skeleton/skeleton.tscn" id="5_7dmy0"]
+[ext_resource type="PackedScene" uid="uid://2ng3c6v14q57" path="res://enemies/goblin/goblin_spr.tscn" id="6_oefav"]
+[ext_resource type="PackedScene" uid="uid://6mf1xu7p820m" path="res://enemies/flying_eye/flying_eye_sprt.tscn" id="7_7ps22"]
+[ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="8_fblfi"]
+[ext_resource type="PackedScene" uid="uid://vwajvj1fslel" path="res://collectionable/bottle/life_flask.tscn" id="9_oefav"]
+[ext_resource type="PackedScene" uid="uid://odnx4dtsllca" path="res://checkpoint/checkpoint.tscn" id="10_7ps22"]
 
 [node name="environment" type="Node2D" unique_id=1386414784]
 
 [node name="nivel_facil" parent="." unique_id=1062196207 instance=ExtResource("1_8a1ph")]
 
 [node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_wjl7u")]
-position = Vector2(-925, 109)
-
-[node name="fondo" parent="." unique_id=42834104 instance=ExtResource("3_wjl7u")]
-scale = Vector2(0.56, 0.4)
-transform = Transform2D(0.56, 0, 0, 0.4, 0, 0)
+position = Vector2(-1697, 349)
 
 [node name="area_cofre" parent="." unique_id=1010804529 instance=ExtResource("4_7uceq")]
-position = Vector2(1744, 304)
+position = Vector2(2033, 125)
+
+[node name="fondo_maligno" parent="." unique_id=1422233237 instance=ExtResource("4_6dawc")]
+
+[node name="enemies" type="Node2D" parent="." unique_id=387058382]
+
+[node name="skeletons" type="Node2D" parent="enemies" unique_id=517689604]
+
+[node name="skeleton" parent="enemies/skeletons" unique_id=1015477422 instance=ExtResource("5_7dmy0")]
+position = Vector2(-907, 530)
+
+[node name="skeleton2" parent="enemies/skeletons" unique_id=1451762145 instance=ExtResource("5_7dmy0")]
+position = Vector2(522, 111)
+
+[node name="static_goblin" parent="enemies" unique_id=200800932 instance=ExtResource("6_oefav")]
+position = Vector2(-344, 358)
+
+[node name="area_flying_eye" parent="enemies" unique_id=1913054269 instance=ExtResource("7_7ps22")]
+position = Vector2(1139, 22)
+
+[node name="collectionables" type="Node2D" parent="." unique_id=1682084680]
+
+[node name="photos" type="Node2D" parent="collectionables" unique_id=887855132]
+
+[node name="photoWin" parent="collectionables/photos" unique_id=430329256 instance=ExtResource("8_fblfi")]
+position = Vector2(1425, 115.00001)
+
+[node name="photoWin2" parent="collectionables/photos" unique_id=1827157849 instance=ExtResource("8_fblfi")]
+position = Vector2(1553, 113)
+
+[node name="photoWin3" parent="collectionables/photos" unique_id=1722216664 instance=ExtResource("8_fblfi")]
+position = Vector2(1684, 114)
+
+[node name="life_flasks" type="Node2D" parent="collectionables" unique_id=160324899]
+
+[node name="life_flask" parent="collectionables/life_flasks" unique_id=625741569 instance=ExtResource("9_oefav")]
+position = Vector2(-671, 492)
+
+[node name="life_flask2" parent="collectionables/life_flasks" unique_id=1738282933 instance=ExtResource("9_oefav")]
+position = Vector2(1, 317)
+
+[node name="life_flask3" parent="collectionables/life_flasks" unique_id=1339209638 instance=ExtResource("9_oefav")]
+position = Vector2(1330, 118)
+
+[node name="checkpoints" type="Node2D" parent="." unique_id=1352627088]
+
+[node name="checkpoint" parent="checkpoints" unique_id=1941651324 instance=ExtResource("10_7ps22")]
+position = Vector2(-531, 398)
+
+[node name="checkpoint2" parent="checkpoints" unique_id=113450913 instance=ExtResource("10_7ps22")]
+position = Vector2(754, 143)
