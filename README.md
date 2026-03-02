@@ -24,13 +24,13 @@ Para poder soltar su carga, deberá ir recogiendo fragmentos de fotos por los di
 
 ![Floor tiles](doc_images/floor_tiles.png)
 
-![Decor](doc_images/decor.png)
+![Decor](doc_images/Decor.png)
 
 - **Interfaz (UI):** Menú principal minimalista y fuentes personalizadas para mejorar la inmersión.
 
 - **Recursos:** Se han utilizado spritesheets para el Samurai y diversos enemigos, así como recursos de audio para la ambientación sonora.
 
-![IDLE_SAMURAI](doc_images/idle.png)
+![IDLE_SAMURAI](doc_images/IDLE.png)
 ![SKELETON](doc_images/Skeleton_01_White_Idle.png)
 ![GOBLIN](doc_images/goblin.png)
 ![FLYING_EYE](doc_images/eye.png)
