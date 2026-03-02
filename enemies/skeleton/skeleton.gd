@@ -80,6 +80,7 @@ func recibir_danio(cantidad):
 
 func morir():
 	Global.reproducir_muerte_monstruo()
+	ani.play("death")
 	
 	visible = false
 	
@@ -89,7 +90,7 @@ func morir():
 	
 	muerto = true
 	velocity = Vector2.ZERO
-	ani.play("death")
+	
 	
 	await ani.animation_finished
 	
