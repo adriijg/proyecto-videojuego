@@ -28,3 +28,21 @@ func ir_al_siguiente_nivel():
 		get_tree().change_scene_to_file(niveles[indice_actual + 1])
 	else:
 		print("¡Fin del juego o nivel no registrado en el Array!")
+		
+# En Global.gd
+# Definimos la variable fuera para que exista siempre
+var reproductor_muerte = AudioStreamPlayer.new()
+
+func _ready():
+	# Esto crea el nodo automáticamente al empezar el juego
+	add_child(reproductor_muerte)
+	reproductor_muerte.stream = load("res://enemy_death.wav") # Asegúrate de que esta ruta sea correcta
+	reproductor_muerte.name = "AudioMuerteGlobal"
+
+func reproducir_muerte_monstruo():
+	# Ahora usamos la variable que creamos arriba
+	if reproductor_muerte.stream:
+		reproductor_muerte.play()
+		print("Sonido ejecutado correctamente")
+	else:
+		print("Error: El archivo de audio no se ha cargado")

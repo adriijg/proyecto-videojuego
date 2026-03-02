@@ -79,12 +79,20 @@ func recibir_danio(cantidad):
 		t.tween_property(visual, "modulate", Color.WHITE, 0.1)
 
 func morir():
+	Global.reproducir_muerte_monstruo()
+	
+	visible = false
+	
+	$col_skeleton_normal.set_deferred("disabled", true)
+	
+	await get_tree().create_timer(0.6).timeout
+	
 	muerto = true
 	velocity = Vector2.ZERO
 	ani.play("death")
-	# Desactiva la colisión principal
-	$col_skeleton_normal.set_deferred("disabled", true)
+	
 	await ani.animation_finished
+	
 	queue_free()
 
 # --- SEÑALES ---

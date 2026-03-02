@@ -67,6 +67,7 @@ func recibir_danio(cantidad):
 		t.tween_property(ani_goblin, "modulate", Color.WHITE, 0.1)
 
 func morir():
+	Global.reproducir_muerte_monstruo()
 	muerto = true
 	print("💀 GOBLIN MUERTO!")
 	

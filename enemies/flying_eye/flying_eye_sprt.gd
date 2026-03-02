@@ -66,6 +66,7 @@ func recibir_danio():
 	morir()
 
 func morir():
+	Global.reproducir_muerte_monstruo()
 	# 1. Paramos todo el procesamiento inmediatamente
 	set_physics_process(false)
 	timer_flying_eye.stop()
