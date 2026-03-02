@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://6h6p4ae3fapt" path="res://niveles/mapa_final/init_map.tscn" id="1_a3vjh"]
 [ext_resource type="PackedScene" uid="uid://ddx4odip8isf8" path="res://samurai/samurai.tscn" id="2_5ydcw"]
 [ext_resource type="PackedScene" uid="uid://dj82mq7s8s7u8" path="res://back/background_init/fondo_init.tscn" id="3_hx3ty"]
+[ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="4_fa7pv"]
 
 [node name="envi_init" type="Node2D" unique_id=84016279]
 
@@ -14,3 +15,14 @@ tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAAAAAEAAAADAAEAAAABAAAAAAAEAAA
 position = Vector2(148, 576)
 
 [node name="fondo_init" parent="." unique_id=68299060 instance=ExtResource("3_hx3ty")]
+
+[node name="photos" type="Node2D" parent="." unique_id=544598861]
+
+[node name="photoWin" parent="photos" unique_id=430329256 instance=ExtResource("4_fa7pv")]
+position = Vector2(158, 561)
+
+[node name="photoWin2" parent="photos" unique_id=1054808565 instance=ExtResource("4_fa7pv")]
+position = Vector2(158, 561)
+
+[node name="photoWin3" parent="photos" unique_id=601803353 instance=ExtResource("4_fa7pv")]
+position = Vector2(158, 561)

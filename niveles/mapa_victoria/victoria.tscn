@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://beyad77l6i4ah"]
+
+[ext_resource type="Texture2D" uid="uid://di5olfiel0ud5" path="res://niveles/mapa_final/img/img_hija.png" id="1_gcocw"]
+[ext_resource type="Script" uid="uid://5lhusnd1j045" path="res://niveles/mapa_victoria/victoria.gd" id="1_tft21"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o3ah3"]
+font_size = 34
+
+[node name="victoria" type="Node2D" unique_id=563011026]
+script = ExtResource("1_tft21")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=175081157]
+offset_right = 1156.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="img_hija" type="Sprite2D" parent="." unique_id=1370668872]
+position = Vector2(575, 378)
+texture = ExtResource("1_gcocw")
+
+[node name="lbl_texto_final" type="Label" parent="." unique_id=1281176245]
+offset_left = 473.0
+offset_top = 124.0
+offset_right = 685.0
+offset_bottom = 171.0
+text = "Continuará..."
+label_settings = SubResource("LabelSettings_o3ah3")
