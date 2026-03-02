@@ -16,10 +16,10 @@
 [node name="nivel_facil" parent="." unique_id=1062196207 instance=ExtResource("1_8a1ph")]
 
 [node name="samurai" parent="." unique_id=730656529 instance=ExtResource("2_wjl7u")]
-position = Vector2(-1697, 349)
+position = Vector2(-1821, 521)
 
 [node name="area_cofre" parent="." unique_id=1010804529 instance=ExtResource("4_7uceq")]
-position = Vector2(2033, 125)
+position = Vector2(2032, 129)
 
 [node name="fondo_maligno" parent="." unique_id=1422233237 instance=ExtResource("4_6dawc")]
 

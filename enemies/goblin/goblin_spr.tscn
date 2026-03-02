@@ -221,7 +221,7 @@ size = Vector2(17, 25)
 radius = 197.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wltgf"]
-size = Vector2(18, 27)
+size = Vector2(33, 27)
 
 [node name="static_goblin" type="StaticBody2D" unique_id=200800932]
 script = ExtResource("1_t8wds")
@@ -255,5 +255,5 @@ shape = SubResource("CircleShape2D_0swc1")
 collision_layer = 8
 
 [node name="col_daño" type="CollisionShape2D" parent="area_daño" unique_id=682063105]
-position = Vector2(0, 9.5)
+position = Vector2(-0.5, 9.5)
 shape = SubResource("RectangleShape2D_wltgf")
