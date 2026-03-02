@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://2ng3c6v14q57" path="res://enemies/goblin/goblin_spr.tscn" id="6_oefav"]
 [ext_resource type="PackedScene" uid="uid://6mf1xu7p820m" path="res://enemies/flying_eye/flying_eye_sprt.tscn" id="7_7ps22"]
 [ext_resource type="PackedScene" uid="uid://d2sb324d2goql" path="res://collectionable/photo/photo_win.tscn" id="8_fblfi"]
+[ext_resource type="PackedScene" uid="uid://ds4e888a07qih" path="res://enemies/spikes/spike.tscn" id="8_mv3i1"]
 [ext_resource type="PackedScene" uid="uid://vwajvj1fslel" path="res://collectionable/bottle/life_flask.tscn" id="9_oefav"]
 [ext_resource type="PackedScene" uid="uid://odnx4dtsllca" path="res://checkpoint/checkpoint.tscn" id="10_7ps22"]
 
@@ -33,11 +34,33 @@ position = Vector2(-907, 530)
 [node name="skeleton2" parent="enemies/skeletons" unique_id=1451762145 instance=ExtResource("5_7dmy0")]
 position = Vector2(522, 111)
 
-[node name="static_goblin" parent="enemies" unique_id=200800932 instance=ExtResource("6_oefav")]
-position = Vector2(-344, 358)
+[node name="skeleton3" parent="enemies/skeletons" unique_id=1874080122 instance=ExtResource("5_7dmy0")]
+position = Vector2(1429, 124)
 
 [node name="area_flying_eye" parent="enemies" unique_id=1913054269 instance=ExtResource("7_7ps22")]
 position = Vector2(1139, 22)
+
+[node name="goblins" type="Node2D" parent="enemies" unique_id=1378045094]
+
+[node name="static_goblin" parent="enemies/goblins" unique_id=200800932 instance=ExtResource("6_oefav")]
+position = Vector2(-344, 358)
+
+[node name="static_goblin2" parent="enemies/goblins" unique_id=1418440235 instance=ExtResource("6_oefav")]
+position = Vector2(1860, 118)
+
+[node name="spikes" type="Node2D" parent="enemies" unique_id=1426639374]
+
+[node name="spike" parent="enemies/spikes" unique_id=151842057 instance=ExtResource("8_mv3i1")]
+position = Vector2(-62, 359)
+
+[node name="spike2" parent="enemies/spikes" unique_id=1322515943 instance=ExtResource("8_mv3i1")]
+position = Vector2(1344, 135)
+
+[node name="spike3" parent="enemies/spikes" unique_id=677066470 instance=ExtResource("8_mv3i1")]
+position = Vector2(-1262, 567)
+
+[node name="spike4" parent="enemies/spikes" unique_id=804201009 instance=ExtResource("8_mv3i1")]
+position = Vector2(-1214, 567)
 
 [node name="collectionables" type="Node2D" parent="." unique_id=1682084680]
 
@@ -54,14 +77,11 @@ position = Vector2(1684, 114)
 
 [node name="life_flasks" type="Node2D" parent="collectionables" unique_id=160324899]
 
-[node name="life_flask" parent="collectionables/life_flasks" unique_id=625741569 instance=ExtResource("9_oefav")]
-position = Vector2(-671, 492)
-
-[node name="life_flask2" parent="collectionables/life_flasks" unique_id=1738282933 instance=ExtResource("9_oefav")]
+[node name="life_flask" parent="collectionables/life_flasks" unique_id=1738282933 instance=ExtResource("9_oefav")]
 position = Vector2(1, 317)
 
-[node name="life_flask3" parent="collectionables/life_flasks" unique_id=1339209638 instance=ExtResource("9_oefav")]
-position = Vector2(1330, 118)
+[node name="life_flask2" parent="collectionables/life_flasks" unique_id=1339209638 instance=ExtResource("9_oefav")]
+position = Vector2(1556, 142)
 
 [node name="checkpoints" type="Node2D" parent="." unique_id=1352627088]
 
