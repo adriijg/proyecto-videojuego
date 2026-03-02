@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cqusud4bytq84"]
+
+[ext_resource type="Script" uid="uid://bhguivl1ft5b3" path="res://menu/config_menu/control.gd" id="1_uxbbm"]
+[ext_resource type="Texture2D" uid="uid://cdt7fa0liig6i" path="res://menu/config_menu/img/menu_config_pc.jpg" id="2_w5k3o"]
+
+[node name="Control" type="Control" unique_id=2046444847]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_uxbbm")
+
+[node name="img_controles" type="TextureRect" parent="." unique_id=1858084764]
+layout_mode = 0
+texture = ExtResource("2_w5k3o")
+stretch_mode = 5
+
+[node name="btn_alternar_mando" type="Button" parent="." unique_id=198621237]
+layout_mode = 0
+offset_left = 458.00003
+offset_top = 40.0
+offset_right = 649.0
+offset_bottom = 71.0
+scale = Vector2(1.25, 1.25)
+text = "Ver controles: TECLADO"
+
+[node name="btn_back" type="Button" parent="." unique_id=1703458993]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 520.0
+offset_right = 591.0
+offset_bottom = 551.0
+scale = Vector2(1.5, 1.5)
+text = "Volver"
+
+[connection signal="pressed" from="btn_alternar_mando" to="." method="_on_btn_alternar_mando_pressed"]
+[connection signal="pressed" from="btn_back" to="." method="_on_btn_back_pressed"]

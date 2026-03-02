@@ -8,7 +8,9 @@ var niveles = [
 	"res://niveles/tester/tester.tscn",
 	"res://niveles/mapa_tutorial/mapa_tutorial.tscn",
 	"res://niveles/nivel1/environment.tscn",
-	"res://niveles/nivel2/nivel_medio.tscn"
+	"res://niveles/nivel2/nivel_medio.tscn",
+	"res://niveles/nivel3/nivel_3.tscn",
+	"res://niveles/mapa_final/envi_final.tscn"
 ]
 
 func ir_al_siguiente_nivel():

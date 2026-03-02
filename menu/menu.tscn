@@ -35,16 +35,12 @@ anchor_bottom = 0.99700004
 offset_left = 2.0
 offset_top = 280.0
 offset_right = -2.3120422
-offset_bottom = -229.05603
+offset_bottom = -265.05603
 metadata/_edit_group_ = true
 
 [node name="btn_start" type="Button" parent="vbox_menu" unique_id=44590991]
 layout_mode = 2
 text = "Iniciar Partida"
-
-[node name="btn_resume" type="Button" parent="vbox_menu" unique_id=884797333]
-layout_mode = 2
-text = "Cargar Partida"
 
 [node name="btn_config" type="Button" parent="vbox_menu" unique_id=1221254686]
 layout_mode = 2
@@ -81,4 +77,5 @@ autoplay = true
 parameters/looping = true
 
 [connection signal="pressed" from="vbox_menu/btn_start" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="vbox_menu/btn_config" to="." method="_on_btn_config_pressed"]
 [connection signal="pressed" from="vbox_menu/btn_exit" to="." method="_on_btn_end_pressed"]
